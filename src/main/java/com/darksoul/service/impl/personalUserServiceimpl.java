@@ -14,9 +14,18 @@ public class personalUserServiceimpl implements personalUserService {
     @Autowired
     private personaluserMapper personaluserMapper1;
 
-@Override
-    public List<personaluser> query(){
+    //用户信息查询
+    @Override
+    public List<personaluser> query() {
         return personaluserMapper1.QueryAllUser();
     }
 
+    //个人用户登录验证
+    @Override
+    public Boolean userlogin(String userphone, String userpassword) {
+        if (personaluserMapper1.GetUserpwdbyphonenumber(userphone).equals(userpassword)) {
+            return true;
+        }
+        return false;
+    }
 }

@@ -8,4 +8,9 @@
         select * from personaluser;
     </select>
 
+    <select id="GetUserpwdbyphonenumber" parameterType="java.lang.String" resultType="java.lang.String">
+        select Password from personaluser where Phonenumber=#{userphonenumber};
+    </select>
+
+
 </mapper>
