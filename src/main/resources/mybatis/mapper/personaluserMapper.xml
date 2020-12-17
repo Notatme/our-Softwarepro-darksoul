@@ -13,4 +13,9 @@
     </select>
 
 
+    <!--通过id查询用户-->
+    <select id="QueryAllUserbyid" parameterType="java.lang.Integer" resultType="personaluser">
+        select * from personaluser where PersonalUserid=#{id};
+    </select>
+
 </mapper>

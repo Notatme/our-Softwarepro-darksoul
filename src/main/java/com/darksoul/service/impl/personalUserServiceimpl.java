@@ -28,4 +28,10 @@ public class personalUserServiceimpl implements personalUserService {
         }
         return false;
     }
+
+    //通过id查询
+    @Override
+    public personaluser querypersonbyid(Integer id){
+        return personaluserMapper1.QueryAllUserbyid(id);
+    }
 }

@@ -34,4 +34,11 @@ public class personaluserHandler {
     return false;
     }
 
+    //通过id查询用户登录信息表
+    @RequestMapping("/finduserbyid/{userid}")
+    @ResponseBody
+    public personaluser getuserbyid(@PathVariable ("userid") Integer id){
+        return personalUserService1.querypersonbyid(id);
+    }
+
 }
