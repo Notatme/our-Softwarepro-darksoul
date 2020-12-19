@@ -9,7 +9,7 @@ import java.sql.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class personal_paper_patents {
+public class Personal_paper_patents {
 //   个人论文著作表
     private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID

@@ -4,18 +4,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Date;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class personal_performance_patents {
-    //个人业绩专利表
+public class Personal_performance_awards {
+//    个人业绩奖项表
     private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID
-    private String Patentsname;//专利名称
-    private String Patentstype;//专利类型
-    private Date Gettime;//取得时间
-    private String Patentsintroduce;//专利介绍
+    private String Projectname;//项目名称
+    private String Awardslevel;//奖励等级
+    private String Awardtime;//授予时间
+    private String Awardorganization;//授予机构
+    private String Content;//内容提要
     private String Assistcertify;//辅助证明材料
+
 }

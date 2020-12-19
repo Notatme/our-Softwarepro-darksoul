@@ -9,7 +9,7 @@ import java.sql.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class personal_performance_achievement {
+public class Personal_performance_achievement {
 //    个人业绩成果表
     private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID

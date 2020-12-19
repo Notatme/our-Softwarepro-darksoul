@@ -9,7 +9,7 @@ import java.sql.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class personal_occupational_qualification {
+public class Personal_occupational_qualification {
 //   个人从业或执业（职业）资格表
     private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID

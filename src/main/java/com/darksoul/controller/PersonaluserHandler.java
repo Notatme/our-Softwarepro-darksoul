@@ -1,7 +1,7 @@
 package com.darksoul.controller;
 
-import com.darksoul.Entity.personaluser;
-import com.darksoul.service.personalUserService;
+import com.darksoul.Entity.Personaluser;
+import com.darksoul.service.PersonalUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,13 +10,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/person")
-public class personaluserHandler {
+public class PersonaluserHandler {
     @Autowired
-    private personalUserService personalUserService1;
+    private PersonalUserService personalUserService1;
 
     @RequestMapping("/finduser")
     @ResponseBody
-    public List<personaluser> getuser(){
+    public List<Personaluser> getuser(){
         return personalUserService1.query();
     }
 
@@ -37,8 +37,14 @@ public class personaluserHandler {
     //通过id查询用户登录信息表
     @RequestMapping("/finduserbyid/{userid}")
     @ResponseBody
-    public personaluser getuserbyid(@PathVariable ("userid") Integer id){
+    public Personaluser getuserbyid(@PathVariable ("userid") Integer id){
         return personalUserService1.querypersonbyid(id);
     }
 
+//    通过phone查找用户id
+    @RequestMapping("/getuseridbyphonenumber/{phonenumber}")
+    @ResponseBody
+    public Personaluser getuseridbyphonenumber(@PathVariable("phonenumber") String phonenumber){
+        return personalUserService1.getUseridbyphonenumber(phonenumber);
+    }
 }

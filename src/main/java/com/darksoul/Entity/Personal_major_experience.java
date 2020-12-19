@@ -9,7 +9,7 @@ import java.sql.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class personal_major_experience {
+public class Personal_major_experience {
 //    个人主要经历表
     private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID

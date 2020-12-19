@@ -9,7 +9,7 @@ import java.sql.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class personal_reviewall {
+public class Personal_reviewall {
 //    个人评审汇总表
     private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID

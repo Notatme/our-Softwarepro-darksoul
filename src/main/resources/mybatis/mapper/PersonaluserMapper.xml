@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--绑定一个对应的Dao/Mapper接口-->
-<mapper namespace="com.darksoul.mapper.personaluserMapper">
+<mapper namespace="com.darksoul.mapper.PersonaluserMapper">
     <select id="QueryAllUser" resultType="personaluser">
         select * from personaluser;
     </select>
@@ -18,4 +18,8 @@
         select * from personaluser where PersonalUserid=#{id};
     </select>
 
+    <!--通过phone查询信息-->
+    <select id="GetUseridbyphonenumber" parameterType="java.lang.String" resultType="personaluser">
+        select p.PersonalUserid from personaluser p where Phonenumber=#{userphonenumber};
+    </select>
 </mapper>

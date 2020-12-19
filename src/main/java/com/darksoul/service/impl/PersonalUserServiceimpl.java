@@ -1,22 +1,22 @@
 package com.darksoul.service.impl;
 
-import com.darksoul.Entity.personaluser;
-import com.darksoul.mapper.personaluserMapper;
-import com.darksoul.service.personalUserService;
+import com.darksoul.Entity.Personaluser;
+import com.darksoul.mapper.PersonaluserMapper;
+import com.darksoul.service.PersonalUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class personalUserServiceimpl implements personalUserService {
+public class PersonalUserServiceimpl implements PersonalUserService {
 
     @Autowired
-    private personaluserMapper personaluserMapper1;
+    private PersonaluserMapper personaluserMapper1;
 
     //用户信息查询
     @Override
-    public List<personaluser> query() {
+    public List<Personaluser> query() {
         return personaluserMapper1.QueryAllUser();
     }
 
@@ -31,7 +31,13 @@ public class personalUserServiceimpl implements personalUserService {
 
     //通过id查询
     @Override
-    public personaluser querypersonbyid(Integer id){
+    public Personaluser querypersonbyid(Integer id){
         return personaluserMapper1.QueryAllUserbyid(id);
+    }
+
+//    通过phonenumber查询到用户id
+    @Override
+    public Personaluser getUseridbyphonenumber(String phonenumber){
+        return personaluserMapper1.GetUseridbyphonenumber(phonenumber);
     }
 }

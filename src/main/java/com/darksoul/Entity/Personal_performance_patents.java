@@ -9,14 +9,13 @@ import java.sql.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class personal_research_materials {
-//   个人国（境）外工作或研究材料表
+public class Personal_performance_patents {
+    //个人业绩专利表
     private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID
-    private Date Starttime;//开始时间
-    private Date Stoptime;//截止时间
-    private String Workunit;//工作单位
-    private String Job;//职务岗位
-    private String Jobcontent;//工作内容
+    private String Patentsname;//专利名称
+    private String Patentstype;//专利类型
+    private Date Gettime;//取得时间
+    private String Patentsintroduce;//专利介绍
     private String Assistcertify;//辅助证明材料
 }
