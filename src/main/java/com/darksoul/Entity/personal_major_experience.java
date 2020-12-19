@@ -11,7 +11,7 @@ import java.sql.Date;
 @NoArgsConstructor
 public class personal_major_experience {
 //    个人主要经历表
-    private String PersonralUserid;//个人用户ID
+    private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID
     private Date Starttime;//开始时间
     private String WhereSchoolWork;//何地,何学校,何单位学习或从事何种专业技术工作

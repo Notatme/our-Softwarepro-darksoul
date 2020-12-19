@@ -11,7 +11,7 @@ import java.sql.Date;
 @NoArgsConstructor
 public class personal_reviewall {
 //    个人评审汇总表
-    private String PersonralUserid;//个人用户ID
+    private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID
     private Date Reviewdate;//申报年度
     private String Review;//评委会所属职改办

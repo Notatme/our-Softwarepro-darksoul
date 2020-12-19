@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class personal_performance_awards {
 //    个人业绩奖项表
-    private String PersonralUserid;//个人用户ID
+    private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID
     private String Projectname;//项目名称
     private String Awardslevel;//奖励等级

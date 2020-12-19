@@ -11,7 +11,7 @@ import java.sql.Date;
 @NoArgsConstructor
 public class personal_performance_patents {
     //个人业绩专利表
-    private String PersonralUserid;//个人用户ID
+    private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID
     private String Patentsname;//专利名称
     private String Patentstype;//专利类型

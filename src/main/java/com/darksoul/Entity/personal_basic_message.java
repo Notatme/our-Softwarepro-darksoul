@@ -11,8 +11,9 @@ import java.sql.Date;
 @NoArgsConstructor
 public class personal_basic_message {
 //    个人基本信息表
-    private String PersonralUserid;//个人用户ID
+    private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID
+    private String unit;//单位
     private String unitlevel;//单位级别
     private String Personalidentitynature;//个人身份性质
     private int Reviewyear;//评审年度

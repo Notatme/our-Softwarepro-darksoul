@@ -11,7 +11,7 @@ import java.sql.Date;
 @NoArgsConstructor
 public class personal_performance_achievement {
 //    个人业绩成果表
-    private String PersonralUserid;//个人用户ID
+    private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID
     private String Performancename;//业绩名称（如项目，专利，标准，课题等）
     private Date Starttime;//开始时间

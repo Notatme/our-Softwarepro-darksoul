@@ -11,7 +11,7 @@ import java.sql.Date;
 @NoArgsConstructor
 public class personal_paper_patents {
 //   个人论文著作表
-    private String PersonralUserid;//个人用户ID
+    private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID
     private Date Publishtime;//发表时间
     private String Paperclasses;//论文类别

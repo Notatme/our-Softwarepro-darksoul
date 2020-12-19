@@ -11,7 +11,7 @@ import java.sql.Date;
 @NoArgsConstructor
 public class personal_occupational_qualification {
 //   个人从业或执业（职业）资格表
-    private String PersonralUserid;//个人用户ID
+    private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID
     private String QualificationName;//资格名称
     private Date Gettime;//取得时间

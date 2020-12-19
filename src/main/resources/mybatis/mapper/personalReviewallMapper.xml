@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.darksoul.mapper.personalReviewallMapper">
+
+
+    <!--通过id查询用户-->
+    <select id="QueryAllreviewallbyid" parameterType="java.lang.Integer" resultType="personal_reviewall">
+        select * from personal_reviewall where PersonalUserid=#{id};
+    </select>
+
+    <!--通过phone查询评审总表-->
+    <select id="QueryAllreviewallbyphonenumber" parameterType="java.lang.String" resultType="personal_reviewall">
+        select pr.Reviewdate,pr.Review,pr.Reviewstatusname,pr.Reviewname,pr.Reviewlevel,pr.Createdate,pr.Reviewhandintime
+         from personal_reviewall pr,personaluser p
+         where pr.PersonalUserid=p.PersonalUserid and p.Phonenumber=#{Phonenumber}
+    </select>
+</mapper>
