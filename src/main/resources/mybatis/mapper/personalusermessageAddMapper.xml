@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.darksoul.mapper.PersonalusermessageAddMapper">
+
+
+    <insert id="personal_messageadd" parameterType="personal_introduceman">
+        insert into personal_introduceman (PersonalUserid, PersonalreviewID, MaterialsName, MaterialsAdjunct) values(#{PersonalUserid}, #{PersonalreviewID},#{MaterialsName},#{MaterialsAdjunct});
+
+--         INSERT INTO personal_introduceman (PersonalUserid, PersonalreviewID, Materialsname, Materialsadjunct) VALUES(5,
+--         1,2,3);
+--          mybatis.user (id,name,pwd) values(#{id},#{name},#{pwd});
+    </insert>
+
+    <insert id="personaladdohtners" parameterType="personal_others">
+        insert into personal_others (PersonalUserid, PersonalreviewID, title, Projectscan) VALUES (#{PersonalUserid},#{PersonalreviewID},#{title},#{Projectscan});
+
+    </insert>
+
+
+    <insert id="personaladd_research_materials" parameterType="personal_research_materials">
+        insert into personal_research_materials (PersonalUserid, PersonalreviewID, starttime, stoptime, workunit, job, jobcontent, assistcertify) values (#{PersonalUserid},#{PersonalreviewID},
+        #{starttime},#{stoptime},#{workunit},#{job},#{jobcontent},#{assistcertify});
+    </insert>
+
+    <insert id="bookaddtest" parameterType="bookcase">
+        insert into bookcase (id,name) values(#{id},#{name});
+    </insert>
+
+</mapper>

@@ -1,14 +1,19 @@
 package com.darksoul.controller;
 
+import com.darksoul.Entity.Personal_introduceman;
 import com.darksoul.Entity.Personaluser;
+//import com.darksoul.Entity.personal_introduceman;
+//import com.darksoul.Entity.personaluser;
 import com.darksoul.service.PersonalUserService;
+//import com.darksoul.service.personalUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 
-@RestController
+@Controller
 @RequestMapping("/person")
 public class PersonaluserHandler {
     @Autowired
@@ -20,12 +25,14 @@ public class PersonaluserHandler {
         return personalUserService1.query();
     }
 
-    //用户登录的接口
+    //用户登录的接口，仅仅通过url传递数值
 
     //http://localhost:8081/person/personaluserlogin?userphonenumber=12345678901&userpassword=123456
+
     @RequestMapping("/personaluserlogin")
-    public Boolean personaluserlogin(@RequestParam("userphonenumber") String phone, @RequestParam("userpassword") String password){
-       if( personalUserService1.userlogin(phone,password)==true)
+    @ResponseBody
+    public Boolean personaluserlogin(@RequestParam(required = true) String userphonenumber, @RequestParam(required = true) String userpassword){
+       if( personalUserService1.userlogin(userphonenumber,userpassword)==true)
        {
            System.out.println("验证成功辣！");
            return true;
@@ -34,6 +41,10 @@ public class PersonaluserHandler {
     return false;
     }
 
+
+
+
+
     //通过id查询用户登录信息表
     @RequestMapping("/finduserbyid/{userid}")
     @ResponseBody
@@ -41,10 +52,4 @@ public class PersonaluserHandler {
         return personalUserService1.querypersonbyid(id);
     }
 
-//    通过phone查找用户id
-    @RequestMapping("/getuseridbyphonenumber/{phonenumber}")
-    @ResponseBody
-    public Personaluser getuseridbyphonenumber(@PathVariable("phonenumber") String phonenumber){
-        return personalUserService1.getUseridbyphonenumber(phonenumber);
-    }
 }

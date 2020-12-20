@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.darksoul.mapper.PersonalusermessageUpdateMapper">
+
+<update id="personal_others_update" parameterType="personal_others">
+
+    update personal_others set PersonalreviewID=#{PersonalreviewID},title=#{title},Projectscan=#{Projectscan} where PersonalUserid=#{PersonalUserid};
+</update>
+
+
+    <update id="personal_introduceman_update" parameterType="personal_introduceman">
+        update personal_introduceman set Materialsname=#{Materialsname},Materialsadjunct=#{Materialsadjunct} where PersonalUserid=#{PersonalUserid};
+    </update>
+
+    <update id="personal_research_materials_update" parameterType="personal_research_materials">
+        update personal_research_materials set starttime=#{starttime},stoptime=#{stoptime},workunit=#{workunit},job=#{job},jobcontent=#{jobcontent},
+        assistcertify=#{assistcertify} where PersonalUserid=#{PersonalUserid};
+    </update>
+
+</mapper>
