@@ -11,15 +11,15 @@ public class Personal_others {
     private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID
     private String title;//标题
-    private String Projectscan;//项目扫描件
+    private String projectscan;//项目扫描件
 
-   public  Personal_others(){}
+    public  Personal_others(){}
 
     public Personal_others(String personalUserid, String personalreviewID, String title, String projectscan) {
         PersonalUserid = personalUserid;
         PersonalreviewID = personalreviewID;
         this.title = title;
-        Projectscan = projectscan;
+        this.projectscan = projectscan;
     }
 
     public String getPersonalUserid() {
@@ -50,12 +50,12 @@ public class Personal_others {
     }
 
     public String getProjectscan() {
-        return Projectscan;
+        return projectscan;
     }
 
     @JsonProperty(value = "Projectscan")
     public void setProjectscan(String projectscan) {
-        Projectscan = projectscan;
+        projectscan = projectscan;
     }
 
     @Override
@@ -64,7 +64,7 @@ public class Personal_others {
                 "PersonalUserid='" + PersonalUserid + '\'' +
                 ", PersonalreviewID='" + PersonalreviewID + '\'' +
                 ", title='" + title + '\'' +
-                ", Projectscan='" + Projectscan + '\'' +
+                ", Projectscan='" + projectscan + '\'' +
                 '}';
     }
 }

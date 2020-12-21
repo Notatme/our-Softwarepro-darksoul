@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.darksoul.mapper.PersonalReviewselectMapper">
+    <!--用户基本信息表查询-->
+    <select id="GetPersonal_basic_messageMapper"   resultType="Personal_basic_message">
+        select * from Personal_basic_message where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID}
+        <!--<where>-->
+            <!--<if test="PersonalUserid!=null">-->
+                <!--and PersonalUserid=#{PersonalUserid}-->
+            <!--</if>-->
+            <!--<if test="PersonalreviewID!=null">-->
+                <!--and PersonalreviewID=#{PersonalreviewID}-->
+            <!--</if>-->
+        <!--</where>-->
+    </select>
+<!--用户学历情况表查询-->
+    <select id="GetPersonal_education" resultType="Personal_education">
+        select * from Personal_education where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID}
+    </select>
+<!--个人主要经历表查询-->
+    <select id="GetPersonal_major_experience" resultType="Personal_major_experience">
+        select * from Personal_major_experience where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID}
+    </select>
+    <!--个人人才引进相关材料表-->
+    <select id="GetPersonal_introduceman" resultType="Personal_introduceman">
+          select * from Personal_introduceman where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID}
+    </select>
+    <!-- 个人论文著作表（personal_paper_patents-->
+    <select id="GetPersonal_paper_patents" resultType="Personal_paper_patents">
+         select * from Personal_paper_patents where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID}
+    </select>
+    <!--个人业绩成果表personal_performance_achievement-->
+    <select id="GetPersonal_performance_achievement" resultType="Personal_performance_achievement">
+        select * from Personal_performance_achievement where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID}
+    </select>
+    <!--个人业绩奖项表personal_performance_awards-->
+    <select id="GetPersonal_performance_awards" resultType="Personal_performance_awards">
+         select * from Personal_performance_awards where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID}
+    </select>
+    <!--	个人业绩专利表（personal_performance_patents）-->
+    <select id="GetPersonal_performance_patents" resultType="Personal_performance_patents">
+        select * from Personal_performance_patents where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID}
+    </select>
+    <!--//	个人从业或执业（职业）资格表（personal_occupational_qualification）-->
+    <select id="GetPersonal_occupational_qualification" resultType="Personal_occupational_qualification">
+         select * from Personal_occupational_qualification where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID}
+    </select>
+    <!--//   个人国（境）外工作或研究材料表（personal_research_materials）-->
+    <select id="GetPersonal_research_materials" resultType="Personal_research_materials">
+        select * from Personal_research_materials where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID}
+    </select>
+    <!--个人工作总结表personal_worksummary-->
+    <select id="GetPersonal_worksummary" resultType="Personal_worksummary">
+        select * from Personal_worksummary where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID}
+    </select>
+
+    <!--//    4.3.15	个人其他材料表（personal_others）-->
+    <select id="GetPersonal_others" resultType="Personal_others">
+        select * from Personal_others where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID}
+    </select>
+
+    <!--<insert id="INSERTpersonal_introduceman" parameterType="personal_introduceman">-->
+        <!--insert into Personal_introduceman VALUES (#{PersonalUserid},#{PersonalreviewID},#{Materialsname},#{Materialsadjunct});-->
+    <!--</insert>-->
+</mapper>

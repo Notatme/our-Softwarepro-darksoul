@@ -1,33 +1,22 @@
 package com.darksoul.Entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.sql.Date;
-
 
 public class Personal_research_materials {
 //   个人国（境）外工作或研究材料表
     private String PersonalUserid;//个人用户ID
     private String PersonalreviewID;//个人评审总表ID
-
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date starttime;//开始时间
-
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date stoptime;//截止时间
-
     private String workunit;//工作单位
     private String job;//职务岗位
     private String jobcontent;//工作内容
     private String assistcertify;//辅助证明材料
-
 
     public Personal_research_materials(){}
     public Personal_research_materials(String personalUserid, String personalreviewID, Date starttime, Date stoptime, String workunit, String job, String jobcontent, String assistcertify) {
