@@ -1,5 +1,6 @@
 package com.darksoul.service.impl;
 
+import com.darksoul.Entity.Personal_basic_message;
 import com.darksoul.Entity.Personal_introduceman;
 import com.darksoul.Entity.Personal_others;
 import com.darksoul.Entity.Personal_research_materials;
@@ -28,5 +29,10 @@ public class PersonalUsermessageUpdateService_impl implements PersonalUsermessag
     @Override
     public int Personal_research_materials_update_service(Personal_research_materials personal_research_materials) {
         return personalusermessageUpdateMapper.personal_research_materials_update(personal_research_materials);
+    }
+
+    @Override
+    public int PersonalUpdate_basic_message_service(Personal_basic_message personal_basic_message) {
+        return personalusermessageUpdateMapper.personal_basic_message_update(personal_basic_message);
     }
 }

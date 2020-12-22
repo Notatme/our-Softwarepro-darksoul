@@ -1,5 +1,6 @@
 package com.darksoul.controller;
 
+import com.darksoul.Entity.Personal_basic_message;
 import com.darksoul.Entity.Personal_introduceman;
 import com.darksoul.Entity.Personal_others;
 import com.darksoul.Entity.Personal_research_materials;
@@ -63,4 +64,20 @@ public class personaluserUpdateHandler {
         return 0;
 
     }
+
+    //更新Personal_basic_message表的信息
+    @RequestMapping(value="/personalUpdate_basic_message",method={RequestMethod.POST})
+    @ResponseBody
+    public int Updatepersonal_introduceman(@RequestBody Personal_basic_message personal_basic_message){
+
+        if((personalUsermessageUpdateService.PersonalUpdate_basic_message_service(personal_basic_message))==1) {
+
+            return 1;
+        }
+
+        System.out.println(personal_basic_message);
+        return 0;
+
+    }
+
 }

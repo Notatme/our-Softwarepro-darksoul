@@ -7,11 +7,8 @@
 
 
     <insert id="personal_messageadd" parameterType="personal_introduceman">
-        insert into personal_introduceman (PersonalUserid, PersonalreviewID, MaterialsName, MaterialsAdjunct) values(#{PersonalUserid}, #{PersonalreviewID},#{MaterialsName},#{MaterialsAdjunct});
+        insert into personal_introduceman (PersonalUserid, PersonalreviewID, materialsname, materialsadjunct) values(#{PersonalUserid}, #{PersonalreviewID},#{materialsname},#{materialsadjunct});
 
---         INSERT INTO personal_introduceman (PersonalUserid, PersonalreviewID, Materialsname, Materialsadjunct) VALUES(5,
---         1,2,3);
---          mybatis.user (id,name,pwd) values(#{id},#{name},#{pwd});
     </insert>
 
     <insert id="personaladdohtners" parameterType="personal_others">
@@ -28,5 +25,18 @@
     <insert id="bookaddtest" parameterType="bookcase">
         insert into bookcase (id,name) values(#{id},#{name});
     </insert>
+
+    <insert id="personaladd_basic_message" parameterType="personal_basic_message">
+        insert into personal_basic_message (PersonalUserid, PersonalreviewID, unit, unitlevel, personalidentitynature, reviewyear, name,
+        nameformer, sex, nation, idnumber, birthday, fillingtime, startworktime, workingyears, reviewmeeting,
+        wantprofessionseries, wantmajor, wantmajorstatus, executivefunction, executivefunctiontime,
+        executivefunctionexplatin, phone, email, fileorganizationname, politicsstatus, nativeplace, address,
+        idcardfront, idcardcontrary, manphoto) values (#{PersonalUserid},#{PersonalreviewID},
+        #{unit},#{unitlevel},#{personalidentitynature},#{reviewyear},#{name},#{nameformer},#{sex},#{nation},#{idnumber},
+        #{birthday},#{fillingtime},#{startworktime},#{workingyears},#{reviewmeeting},#{wantprofessionseries},#{wantmajor},
+        #{wantmajorstatus},#{executivefunction},#{executivefunctiontime},#{executivefunctionexplatin},#{phone},#{email},
+        #{fileorganizationname},#{politicsstatus},#{nativeplace},#{address},#{idcardfront},#{idcardcontrary},#{manphoto});
+    </insert>
+
 
 </mapper>

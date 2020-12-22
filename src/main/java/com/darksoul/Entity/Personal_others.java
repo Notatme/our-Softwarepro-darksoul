@@ -53,7 +53,7 @@ public class Personal_others {
         return projectscan;
     }
 
-    @JsonProperty(value = "Projectscan")
+
     public void setProjectscan(String projectscan) {
         projectscan = projectscan;
     }
