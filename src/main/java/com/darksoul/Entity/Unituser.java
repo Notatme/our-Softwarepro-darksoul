@@ -48,6 +48,7 @@ public class Unituser {
         return UnitUsername;
     }
 
+    @JsonProperty(value = "UnitUsername")
     public void setUnitUsername(String unitUsername) {
         UnitUsername = unitUsername;
     }

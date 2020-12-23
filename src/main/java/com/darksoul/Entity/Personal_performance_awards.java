@@ -1,9 +1,13 @@
 package com.darksoul.Entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.sql.Date;
 
 
 public class Personal_performance_awards {
@@ -12,7 +16,9 @@ public class Personal_performance_awards {
     private String PersonalreviewID;//个人评审总表ID
     private String projectname;//项目名称
     private String awardslevel;//奖励等级
-    private String awardtime;//授予时间
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private Date awardtime;//授予时间
     private String awardorganization;//授予机构
     private String content;//内容提要
     private String assistcertify;//辅助证明材料
@@ -20,7 +26,7 @@ public class Personal_performance_awards {
     public Personal_performance_awards() {
     }
 
-    public Personal_performance_awards(String personalUserid, String personalreviewID, String projectname, String awardslevel, String awardtime, String awardorganization, String content, String assistcertify) {
+    public Personal_performance_awards(String personalUserid, String personalreviewID, String projectname, String awardslevel, Date awardtime, String awardorganization, String content, String assistcertify) {
         PersonalUserid = personalUserid;
         PersonalreviewID = personalreviewID;
         this.projectname = projectname;
@@ -63,11 +69,11 @@ public class Personal_performance_awards {
         this.awardslevel = awardslevel;
     }
 
-    public String getAwardtime() {
+    public Date getAwardtime() {
         return awardtime;
     }
 
-    public void setAwardtime(String awardtime) {
+    public void setAwardtime(Date awardtime) {
         this.awardtime = awardtime;
     }
 
@@ -102,7 +108,7 @@ public class Personal_performance_awards {
                 ", PersonalreviewID='" + PersonalreviewID + '\'' +
                 ", projectname='" + projectname + '\'' +
                 ", awardslevel='" + awardslevel + '\'' +
-                ", awardtime='" + awardtime + '\'' +
+                ", awardtime=" + awardtime +
                 ", awardorganization='" + awardorganization + '\'' +
                 ", content='" + content + '\'' +
                 ", assistcertify='" + assistcertify + '\'' +

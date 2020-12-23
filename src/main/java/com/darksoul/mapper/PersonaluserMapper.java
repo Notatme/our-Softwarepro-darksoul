@@ -3,6 +3,7 @@ package com.darksoul.mapper;
 import com.darksoul.Entity.Personal_basic_message;
 import com.darksoul.Entity.Personaluser;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -27,4 +28,6 @@ public interface PersonaluserMapper {
 //    通过phonenumber查找到id
     Personaluser GetUseridbyphonenumber(String phonenumber);
 
+//登录之后的修改密码
+    int personaluserchangepassword(@Param("PersonalUserid") String personalUserid,@Param("password") String password);
 }

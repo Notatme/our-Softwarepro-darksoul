@@ -48,7 +48,7 @@ public class Personaluser {
     public String getPersonalUsername() {
         return PersonalUsername;
     }
-
+    @JsonProperty(value = "PersonalUsername")
     public void setPersonalUsername(String personalUsername) {
         PersonalUsername = personalUsername;
     }

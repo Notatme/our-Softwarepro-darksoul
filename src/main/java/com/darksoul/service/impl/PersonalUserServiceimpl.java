@@ -40,4 +40,9 @@ public class PersonalUserServiceimpl implements PersonalUserService {
     public Personaluser getUseridbyphonenumber(String phonenumber){
         return personaluserMapper1.GetUseridbyphonenumber(phonenumber);
     }
+
+    @Override
+    public int personaluserchangepassword_service(String PersonalUserid, String password) {
+        return personaluserMapper1.personaluserchangepassword(PersonalUserid,password);
+    }
 }

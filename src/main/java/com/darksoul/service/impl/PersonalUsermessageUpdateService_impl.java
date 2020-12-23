@@ -1,9 +1,6 @@
 package com.darksoul.service.impl;
 
-import com.darksoul.Entity.Personal_basic_message;
-import com.darksoul.Entity.Personal_introduceman;
-import com.darksoul.Entity.Personal_others;
-import com.darksoul.Entity.Personal_research_materials;
+import com.darksoul.Entity.*;
 import com.darksoul.mapper.PersonalusermessageUpdateMapper;
 import com.darksoul.service.PersonalUsermessageUpdateService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,5 +31,55 @@ public class PersonalUsermessageUpdateService_impl implements PersonalUsermessag
     @Override
     public int PersonalUpdate_basic_message_service(Personal_basic_message personal_basic_message) {
         return personalusermessageUpdateMapper.personal_basic_message_update(personal_basic_message);
+    }
+
+    @Override
+    public int Personal_Update_education_service(Personal_education personal_education) {
+        return personalusermessageUpdateMapper.personal_education_update(personal_education);
+    }
+
+    @Override
+    public int Personal_Update_major_experience_service(Personal_major_experience personal_major_experience) {
+        return personalusermessageUpdateMapper.Personal_Update_major_experience(personal_major_experience);
+    }
+
+    @Override
+    public int Personal_Update_occupational_qualification_service(Personal_occupational_qualification personal_occupational_qualification) {
+        return personalusermessageUpdateMapper.Personal_Update_occupational_qualification(personal_occupational_qualification);
+    }
+
+    @Override
+    public int Personal_Update_paper_patents_service(Personal_paper_patents personal_paper_patents) {
+        return personalusermessageUpdateMapper.Personal_Update_paper_patents(personal_paper_patents);
+    }
+
+    @Override
+    public int Personal_Update_performance_achievement_service(Personal_performance_achievement personal_performance_achievement) {
+        return personalusermessageUpdateMapper.Personal_Update_performance_achievement(personal_performance_achievement);
+    }
+
+    @Override
+    public int Personal_Update_performance_awards_service(Personal_performance_awards personal_performance_awards) {
+        return personalusermessageUpdateMapper.Personal_Update_performance_awards(personal_performance_awards);
+    }
+
+    @Override
+    public int Personal_Update_performance_patents_service(Personal_performance_patents personal_performance_patents) {
+        return personalusermessageUpdateMapper.Personal_Update_performance_patents(personal_performance_patents);
+    }
+
+    @Override
+    public int Personal_Update_reviewall_service(Personal_reviewall personal_reviewall) {
+        return personalusermessageUpdateMapper.Personal_Update_reviewall(personal_reviewall);
+    }
+
+    @Override
+    public int Personal_Update_worksummary_service(Personal_worksummary personal_worksummary) {
+        return personalusermessageUpdateMapper.Personal_Update_worksummary(personal_worksummary);
+    }
+
+    @Override
+    public int Personal_Update_Personaluser_service(Personaluser personaluser) {
+        return personalusermessageUpdateMapper.Personal_Update_Personaluser(personaluser);
     }
 }

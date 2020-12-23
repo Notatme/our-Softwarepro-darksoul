@@ -38,5 +38,53 @@
         #{fileorganizationname},#{politicsstatus},#{nativeplace},#{address},#{idcardfront},#{idcardcontrary},#{manphoto});
     </insert>
 
+<insert id="PersonalAdd_education" parameterType="personal_education">
+    insert into personal_education (PersonalUserid, PersonalreviewID, graduationtime, graduationschool, educationproject, major, education, degree, lengthofschooling, educationid, educationdegreecredential)
+    values (#{PersonalUserid},#{PersonalreviewID},#{graduationtime},#{graduationschool},#{educationproject},#{major},#{education},#{degree},#{lengthofschooling},#{educationid},#{educationdegreecredential});
+</insert>
 
+
+    <insert id="PersonalAdd_major_experience" parameterType="personal_major_experience">
+        insert into personal_major_experience (PersonalUserid, PersonalreviewID, starttime, whereschoolwork, endtime, post, workunit, certifyman, helpcertify) VALUES
+        (#{PersonalUserid},#{PersonalreviewID},#{starttime},#{whereschoolwork},#{endtime},#{post},#{workunit},#{certifyman},#{helpcertify});
+    </insert>
+
+    <insert id="PersonalAdd_occupational_qualification" parameterType="personal_occupational_qualification">
+        insert into personal_occupational_qualification (PersonalUserid, PersonalreviewID, qualificationname, gettime, ratifyoffice, majorname, credentialnumber, assistcertify)
+        values (#{PersonalUserid},#{PersonalreviewID},#{qualificationname},#{gettime},#{ratifyoffice},#{majorname},#{credentialnumber},#{assistcertify});
+    </insert>
+
+    <insert id="PersonalAdd_paper_patents_add" parameterType="personal_paper_patents">
+        insert into personal_paper_patents (PersonalUserid, PersonalreviewID, publishtime, paperclasses, role, ifmagnumopus, insertperiodical, authorityindexes, yearperiodical, reward, papername, ifrecommend, paperlevel, papercover, papercatalog, papercontent)
+        values (#{PersonalUserid},#{PersonalreviewID},#{publishtime},#{paperclasses},#{role},#{ifmagnumopus},#{insertperiodical},#{authorityindexes},#{yearperiodical},#{reward},#{papername},#{ifrecommend},#{paperlevel},#{papercover},#{papercatalog},#{papercontent});
+    </insert>
+
+    <insert id="PersonalAdd_performance_achievement_add" parameterType="personal_performance_achievement">
+        insert into personal_performance_achievement (PersonalUserid, PersonalreviewID, performancename, starttime, stoptime, projectlevel, projectcontent, personaleffect, achievementeffect, projectscan, personalprojectscan, projectawardsscan)
+        values (#{PersonalUserid},#{PersonalreviewID},#{performancename},#{starttime},#{stoptime},#{projectlevel},#{projectcontent},#{personaleffect},#{achievementeffect},#{projectscan},#{personalprojectscan},#{projectawardsscan});
+    </insert>
+
+    <insert id="PersonalAdd_performance_awards_add" parameterType="personal_performance_awards">
+        insert into personal_performance_awards (PersonalUserid, PersonalreviewID, projectname, awardslevel, awardtime, awardorganization, content, assistcertify) values
+        (#{PersonalUserid},#{PersonalreviewID},#{projectname},#{awardslevel},#{awardtime},#{awardorganization},#{content},#{assistcertify});
+    </insert>
+
+    <insert id="PersonalAdd_performance_patents_add" parameterType="personal_performance_patents">
+       insert into personal_performance_patents (PersonalUserid, PersonalreviewID, patentsname, patentstype, gettime, patentsintroduce, assistcertify) VALUES
+       (#{PersonalUserid},#{PersonalreviewID},#{patentsname},#{patentstype},#{gettime},#{patentsintroduce},#{assistcertify});
+    </insert>
+
+    <insert id="PersonalAdd_reviewall_add" parameterType="personal_reviewall">
+       insert into personal_reviewall (PersonalUserid, PersonalreviewID, reviewdate, review, reviewstatusname, reviewname, reviewlevel, createdate, reviewhandintime) VALUES
+      (#{PersonalUserid},#{PersonalreviewID},#{reviewdate},#{review},#{reviewstatusname},#{reviewname},#{reviewlevel},#{createdate},#{reviewhandintime});
+    </insert>
+
+    <insert id="PersonalAdd_worksummary_add" parameterType="personal_worksummary">
+        insert into personal_worksummary (PersonalUserid, PersonalreviewID, worksummary) VALUES (#{PersonalUserid},#{PersonalreviewID},#{worksummary});
+    </insert>
+
+   <insert id="PersonalAdd_Personaluser_add" parameterType="personaluser">
+       insert into personaluser (PersonalUserid, PersonalUsername, password, unitusername, email, phonenumber, headphoto, createdate) VALUES
+      (#{PersonalUserid},#{PersonalUsername},#{password},#{unitusername},#{email},#{phonenumber},#{headphoto},#{createdate});
+   </insert>
 </mapper>

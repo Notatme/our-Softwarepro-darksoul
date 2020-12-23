@@ -1,10 +1,7 @@
 package com.darksoul.controller;
 
-import com.darksoul.Entity.Personal_basic_message;
-import com.darksoul.Entity.Personal_introduceman;
+import com.darksoul.Entity.*;
 //import com.darksoul.Entity.personal_introduceman;
-import com.darksoul.Entity.Personal_others;
-import com.darksoul.Entity.Personal_research_materials;
 import com.darksoul.mapper.PersonalusermessageAddMapper;
 import com.darksoul.service.personalUsermessageAddService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -119,5 +116,160 @@ public class personaluserAddHandler {
         return 0;
 
     }
+
+    //增加用户Personal_education表的信息
+    @RequestMapping(value="/personalAdd_education_add",method={RequestMethod.POST})
+    @ResponseBody
+    public int Addpersonal_others(@RequestBody Personal_education personal_education){
+
+        if((personalUsermessageAddService1.PersonalAdd_education_add_service(personal_education))==1) {
+
+            return 1;
+        }
+
+        System.out.println(personal_education);
+        return 0;
+
+    }
+
+    //增加用户Personal_major_experience表的信息
+    @RequestMapping(value="/personalAdd_major_experience_add",method={RequestMethod.POST})
+    @ResponseBody
+    public int Addpersonal_others(@RequestBody Personal_major_experience personal_major_experience){
+
+        if((personalUsermessageAddService1.personalAdd_major_experience_add_service(personal_major_experience))==1) {
+
+            return 1;
+        }
+
+        System.out.println(personal_major_experience);
+        return 0;
+
+    }
+
+
+    //增加用户Personal_occupational_qualification表的信息
+    @RequestMapping(value="/personalAdd_occupational_qualification_add",method={RequestMethod.POST})
+    @ResponseBody
+    public int Addpersonal_others(@RequestBody Personal_occupational_qualification personal_occupational_qualification){
+
+        if((personalUsermessageAddService1.PersonalAdd_occupational_qualification_add(personal_occupational_qualification))==1) {
+
+            return 1;
+        }
+
+        System.out.println(personal_occupational_qualification);
+        return 0;
+
+    }
+
+
+    //增加用户Personal_paper_patents表的信息
+    @RequestMapping(value="/personalAdd_paper_patents_add",method={RequestMethod.POST})
+    @ResponseBody
+    public int Addpersonal_others(@RequestBody Personal_paper_patents personal_paper_patents){
+
+        if((personalUsermessageAddService1.PersonalAdd_paper_patents_add_service(personal_paper_patents))==1) {
+
+            return 1;
+        }
+
+        System.out.println(personal_paper_patents);
+        return 0;
+
+    }
+
+    //增加用户Personal_performance_achievement表的信息
+    @RequestMapping(value="/personalAdd_performance_achievement_add",method={RequestMethod.POST})
+    @ResponseBody
+    public int Addpersonal(@RequestBody Personal_performance_achievement personal_performance_achievement){
+
+        if((personalUsermessageAddService1.PersonalAdd_performance_achievement_add_service(personal_performance_achievement))==1) {
+
+            return 1;
+        }
+
+        System.out.println(personal_performance_achievement);
+        return 0;
+
+    }
+
+    //增加用户Personal_performance_awards表的信息
+    @RequestMapping(value="/personalAdd_performance_awards_add",method={RequestMethod.POST})
+    @ResponseBody
+    public int Addpersonal(@RequestBody Personal_performance_awards personal_performance_awards){
+
+        if((personalUsermessageAddService1.PersonalAdd_performance_awards_add_service(personal_performance_awards))==1) {
+
+            return 1;
+        }
+
+        System.out.println(personal_performance_awards);
+        return 0;
+
+    }
+
+    //增加用户Personal_performance_patents表的信息
+    @RequestMapping(value="/personalAdd_performance_patents_add",method={RequestMethod.POST})
+    @ResponseBody
+    public int Addpersonal(@RequestBody Personal_performance_patents personal_performance_patents){
+
+        if((personalUsermessageAddService1.PersonalAdd_performance_patents_add_service(personal_performance_patents))==1) {
+
+            return 1;
+        }
+
+        System.out.println(personal_performance_patents);
+        return 0;
+
+    }
+
+    //增加用户Personal_reviewall表的信息
+    @RequestMapping(value="/personalAdd_reviewall_add",method={RequestMethod.POST})
+    @ResponseBody
+    public int Addpersonal(@RequestBody Personal_reviewall personal_reviewall){
+
+        if((personalUsermessageAddService1.PersonalAdd_reviewall_add_service(personal_reviewall))==1) {
+
+            return 1;
+        }
+
+        System.out.println(personal_reviewall);
+        return 0;
+
+    }
+
+    //增加用户Personal_worksummary表的信息
+    @RequestMapping(value="/personalAdd_worksummary_add",method={RequestMethod.POST})
+    @ResponseBody
+    public int Addpersonal(@RequestBody Personal_worksummary personal_worksummary){
+
+        if((personalUsermessageAddService1.PersonalAdd_worksummary_add_service(personal_worksummary))==1) {
+
+            return 1;
+        }
+
+        System.out.println(personal_worksummary);
+        return 0;
+
+    }
+
+
+    //增加用户Personaluser表的信息，实现用户注册
+    @RequestMapping(value="/personalAdd_Personaluser_add",method={RequestMethod.POST})
+    @ResponseBody
+    public int Addpersonal(@RequestBody Personaluser personaluser){
+
+        if((personalUsermessageAddService1.PersonalAdd_Personaluser_add_service(personaluser))==1) {
+
+            return 1;
+        }
+
+        System.out.println(personaluser);
+        return 0;
+
+    }
+
+
 
 }

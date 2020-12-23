@@ -25,8 +25,7 @@ public class PersonaluserHandler {
         return personalUserService1.query();
     }
 
-    //用户登录的接口，仅仅通过url传递数值
-
+    //用户登录的接口，仅仅通过url传递数值，实现用户的登录验证
     //http://localhost:8081/person/personaluserlogin?userphonenumber=12345678901&userpassword=123456
 
     @RequestMapping("/personaluserlogin")
@@ -39,6 +38,19 @@ public class PersonaluserHandler {
 
        }
     return false;
+    }
+
+
+    @RequestMapping("/personaluserchangepassword")
+    @ResponseBody
+    public int personaluserchangepassword(@RequestParam(required = true) String PersonalUserid, @RequestParam(required = true) String password){
+        if( personalUserService1.personaluserchangepassword_service(PersonalUserid,password)==1)
+        {
+            System.out.println("验证成功辣！");
+            return 1;
+
+        }
+        return 0;
     }
 
 

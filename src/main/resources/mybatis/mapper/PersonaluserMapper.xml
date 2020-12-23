@@ -22,4 +22,9 @@
     <select id="GetUseridbyphonenumber" parameterType="java.lang.String" resultType="personaluser">
         select p.PersonalUserid from personaluser p where Phonenumber=#{userphonenumber};
     </select>
+
+    <update id="personaluserchangepassword" parameterType="java.lang.String">
+        update personaluser set password=#{password} where PersonalUserid=#{PersonalUserid};
+    </update>
+
 </mapper>

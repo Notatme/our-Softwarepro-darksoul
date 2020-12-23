@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.darksoul.mapper.UnituserMapper">
+
+    <!--单位用户实现注册-->
+    <insert id="Unituser_add" parameterType="unituser">
+        insert into unituser (UnitUserid, UnitUsername, password, email, phonenumber, headphoto, createdate) values
+        (#{UnitUserid},#{UnitUsername},#{password},#{email},#{phonenumber},#{headphoto},#{createdate});
+    </insert>
+
+    <update id="Unituser_Update" parameterType="unituser">
+        update unituser set UnitUsername=#{UnitUsername},password=#{password},email=#{email},phonenumber=#{phonenumber},headphoto=#{headphoto},createdate=#{createdate} where
+        UnitUserid=#{UnitUserid};
+    </update>
+
+</mapper>
