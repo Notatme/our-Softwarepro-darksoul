@@ -22,4 +22,9 @@ public class PersonalReviewallimpl implements PersonalReviewallservice {
     public Personal_reviewall querypersonalReviewallbyPhonenumber(String Phonenumber) {
         return personalReviewallMapper.QueryAllreviewallbyphonenumber(Phonenumber);
     }
+    //在评审总表界面将其中一条评审表删除。
+    @Override
+     public void DeletePersonal_reviewall(String personalUserid, String personalreviewID) {
+         personalReviewallMapper.DeletePersonal_reviewall(personalUserid,personalreviewID);
+    }
 }

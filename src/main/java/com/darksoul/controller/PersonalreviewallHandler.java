@@ -1,12 +1,10 @@
 package com.darksoul.controller;
 
+import com.darksoul.Entity.Personal_performance_achievement;
 import com.darksoul.Entity.Personal_reviewall;
 import com.darksoul.service.PersonalReviewallservice;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/reviewall")
@@ -27,5 +25,11 @@ public class PersonalreviewallHandler {
     @ResponseBody
     public Personal_reviewall getpersonal_reviewallbyPhonenumber(@PathVariable("Phonenumber")String Phonenumber){
         return personalReviewallservice.querypersonalReviewallbyPhonenumber(Phonenumber);
+    }
+    //在评审总表界面将其中一条评审表删除。
+    @RequestMapping("/deletereviewallbyid")
+    public void DeletePersonal_reviewall(@RequestParam("PersonalUserid") String PersonalUserid, @RequestParam("PersonalreviewID") String PersonalreviewID){
+         personalReviewallservice.DeletePersonal_reviewall(PersonalUserid,PersonalreviewID);
+
     }
 }

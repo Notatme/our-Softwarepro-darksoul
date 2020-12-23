@@ -17,4 +17,23 @@
          from personal_reviewall pr,personaluser p
          where pr.PersonalUserid=p.PersonalUserid and p.Phonenumber=#{Phonenumber}
     </select>
+    <!--//在评审总表界面将其中一条评审表删除。-->
+    <delete id="DeletePersonal_reviewall">
+       DELETE personal_reviewall,personal_basic_message,personal_education,personal_introduceman,personal_major_experience,personal_occupational_qualification,personal_others,personal_paper_patents,personal_performance_achievement,personal_performance_awards,personal_performance_patents,personal_research_materials,personal_worksummary
+  FROM personal_reviewall
+  LEFT JOIN personal_basic_message on personal_reviewall.PersonalUserid=personal_basic_message.PersonalUserid
+  LEFT JOIN personal_education ON personal_reviewall.PersonalUserid=personal_education.PersonalUserid
+  LEFT JOIN personal_introduceman on personal_reviewall.PersonalUserid=personal_introduceman.PersonalUserid
+  LEFT JOIN personal_major_experience on personal_reviewall.PersonalUserid=personal_major_experience.PersonalUserid
+  LEFT JOIN personal_occupational_qualification on personal_reviewall.PersonalUserid=personal_occupational_qualification.PersonalUserid
+  LEFT JOIN personal_others  on personal_reviewall.PersonalUserid=personal_others.PersonalUserid
+  LEFT JOIN personal_paper_patents on personal_reviewall.PersonalUserid=personal_paper_patents.PersonalUserid
+  LEFT JOIN personal_performance_achievement on personal_reviewall.PersonalUserid=personal_performance_achievement.PersonalUserid
+  LEFT JOIN personal_performance_awards on personal_reviewall.PersonalUserid=personal_performance_awards.PersonalUserid
+  LEFT JOIN personal_performance_patents on personal_reviewall.PersonalUserid=personal_performance_patents.PersonalUserid
+  LEFT JOIN personal_research_materials on personal_reviewall.PersonalUserid=personal_research_materials.PersonalUserid
+  LEFT JOIN personal_worksummary on personal_reviewall.PersonalUserid=personal_worksummary.PersonalUserid
+    WHERE personal_reviewall.PersonalUserid=#{PersonalUserid} AND personal_reviewall.PersonalreviewID=#{PersonalreviewID}
+
+    </delete>
 </mapper>
