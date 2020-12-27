@@ -48,6 +48,8 @@
             SELECT *
             FROM personal_reviewall
             LEFT JOIN personaluser ON personal_reviewall.PersonalUserid=personaluser.PersonalUserid
-            WHERE personaluser.PersonalUsername LIKE "%"#{PersonalUsername}"%";
+            WHERE personaluser.PersonalUsername LIKE  CONCAT('%',#{PersonalUsername}, '%');
     </select>
+    <!--'%',#{name}, '%'-->
+    <!--"%"#{PersonalUsername}"%"-->
 </mapper>
