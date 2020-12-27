@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.sql.Date;
+import java.util.List;
 
 
 public class Personal_reviewall {
@@ -27,11 +28,15 @@ public class Personal_reviewall {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date createdate;//创建时间
     private String reviewhandintime;//材料报送时间段
+    private String reviewstate;//审核状态
+
+//    private Personaluser personaluser;//用户
+//    private List<Personal_basic_message> personal_basic_messagesS;//个人基本信息实体类
 
     public Personal_reviewall() {
     }
 
-    public Personal_reviewall(String personalUserid, String personalreviewID, Date reviewdate, String review, String reviewstatusname, String reviewname, String reviewlevel, Date createdate, String reviewhandintime) {
+    public Personal_reviewall(String personalUserid, String personalreviewID, Date reviewdate, String review, String reviewstatusname, String reviewname, String reviewlevel, Date createdate, String reviewhandintime, String reviewstate) {
         PersonalUserid = personalUserid;
         PersonalreviewID = personalreviewID;
         this.reviewdate = reviewdate;
@@ -41,6 +46,7 @@ public class Personal_reviewall {
         this.reviewlevel = reviewlevel;
         this.createdate = createdate;
         this.reviewhandintime = reviewhandintime;
+        this.reviewstate = reviewstate;
     }
 
     public String getPersonalUserid() {
@@ -115,6 +121,14 @@ public class Personal_reviewall {
         this.reviewhandintime = reviewhandintime;
     }
 
+    public String getReviewstate() {
+        return reviewstate;
+    }
+
+    public void setReviewstate(String reviewstate) {
+        this.reviewstate = reviewstate;
+    }
+
     @Override
     public String toString() {
         return "Personal_reviewall{" +
@@ -127,6 +141,7 @@ public class Personal_reviewall {
                 ", reviewlevel='" + reviewlevel + '\'' +
                 ", createdate=" + createdate +
                 ", reviewhandintime='" + reviewhandintime + '\'' +
+                ", reviewstate='" + reviewstate + '\'' +
                 '}';
     }
 }

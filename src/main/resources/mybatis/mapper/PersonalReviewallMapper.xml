@@ -36,4 +36,18 @@
     WHERE personal_reviewall.PersonalUserid=#{PersonalUserid} AND personal_reviewall.PersonalreviewID=#{PersonalreviewID}
 
     </delete>
+    
+
+    <select id="Getselectreviewall" resultType="Personal_reviewall">
+        select *
+        from personal_reviewall
+        where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
+    </select>
+
+    <select id="Getselectreviewallbyname" resultType="Personal_reviewall">
+            SELECT *
+            FROM personal_reviewall
+            LEFT JOIN personaluser ON personal_reviewall.PersonalUserid=personaluser.PersonalUserid
+            WHERE personaluser.PersonalUsername LIKE "%"#{PersonalUsername}"%";
+    </select>
 </mapper>

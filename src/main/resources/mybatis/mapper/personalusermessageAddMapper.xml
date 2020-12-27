@@ -75,8 +75,8 @@
     </insert>
 
     <insert id="PersonalAdd_reviewall_add" parameterType="personal_reviewall">
-       insert into personal_reviewall (PersonalUserid, PersonalreviewID, reviewdate, review, reviewstatusname, reviewname, reviewlevel, createdate, reviewhandintime) VALUES
-      (#{PersonalUserid},#{PersonalreviewID},#{reviewdate},#{review},#{reviewstatusname},#{reviewname},#{reviewlevel},#{createdate},#{reviewhandintime});
+       insert into personal_reviewall (PersonalUserid, PersonalreviewID, reviewdate, review, reviewstatusname, reviewname, reviewlevel, createdate, reviewhandintime,reviewstate) VALUES
+      (#{PersonalUserid},#{PersonalreviewID},#{reviewdate},#{review},#{reviewstatusname},#{reviewname},#{reviewlevel},#{createdate},#{reviewhandintime},#{reviewstate});
     </insert>
 
     <insert id="PersonalAdd_worksummary_add" parameterType="personal_worksummary">

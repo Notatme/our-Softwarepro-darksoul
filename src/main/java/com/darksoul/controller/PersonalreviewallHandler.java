@@ -6,6 +6,8 @@ import com.darksoul.service.PersonalReviewallservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/reviewall")
 public class PersonalreviewallHandler {
@@ -32,4 +34,24 @@ public class PersonalreviewallHandler {
          personalReviewallservice.DeletePersonal_reviewall(PersonalUserid,PersonalreviewID);
 
     }
+//    评审总表显示表内详情
+    @RequestMapping("/selectreviewallbyid")
+    public Personal_reviewall Getselectreviewall(@RequestParam("PersonalUserid") String PersonalUserid, @RequestParam("PersonalreviewID") String PersonalreviewID){
+      return  personalReviewallservice.Getselectreviewall(PersonalUserid,PersonalreviewID);
+    }
+
+//   评审总表中如果使用子表查询
+//    @RequestMapping("/selectreviewall")
+//    public Personal_reviewall Getselectreviewalltest(@RequestParam("PersonalUserid") String PersonalUserid, @RequestParam("PersonalreviewID") String PersonalreviewID){
+//        return  personalReviewallservice.Getselectreviewalltest(PersonalUserid,PersonalreviewID);
+//    }
+//
+////    根据用户名查询找到的
+
+//    单位用户通过模糊查询，输入个人用户名字查找总表信息
+    @RequestMapping("/selectreviewallbyname")
+    public List<Personal_reviewall> Getselectreviewallbyname(@RequestParam("PersonalUsername") String PersonalUsername){
+        return personalReviewallservice.Getselectreviewallbyname(PersonalUsername);
+    }
+
 }

@@ -66,7 +66,7 @@
     </update>
 
     <update id="Personal_Update_reviewall" parameterType="personal_reviewall">
-        update personal_reviewall set reviewdate=#{reviewdate}, review=#{review}, reviewstatusname=#{reviewstatusname}, reviewname=#{reviewname}, reviewlevel=#{reviewlevel}, createdate=#{createdate}, reviewhandintime=#{reviewhandintime} where
+        update personal_reviewall set reviewdate=#{reviewdate}, review=#{review}, reviewstatusname=#{reviewstatusname}, reviewname=#{reviewname}, reviewlevel=#{reviewlevel}, createdate=#{createdate}, reviewhandintime=#{reviewhandintime} reviewstate=#{reviewstate} where
         PersonalUserid=#{PersonalUserid};
     </update>
 
