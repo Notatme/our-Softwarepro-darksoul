@@ -48,4 +48,6 @@ public class PersonalReviewallimpl implements PersonalReviewallservice {
 //        personal_reviewall.setPersonal_basic_messages(personalReviewallMapper.GetsomePersonal_basic_message(personalUserid,personalreviewID));
 //        return personal_reviewall;
 //    }
+
+
 }

@@ -1,5 +1,6 @@
 package com.darksoul.controller;
 
+import com.darksoul.Entity.Personal_reviewall;
 import com.darksoul.Entity.Unituser;
 import com.darksoul.service.Unituser_Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @Controller
@@ -81,5 +83,18 @@ public class UnituserHandler {
         return machineId + String.format("%015d", hashCodeV);
     }
 
+
+    @RequestMapping("/selectreviewallbyphonenumber")
+    @ResponseBody
+    public List<Personal_reviewall> Getselectreviewallbyphonenumber(@RequestParam("phonenumber") String phonenumber){
+        return unituser_service.Getselectreviewallbyphonenumber(phonenumber);
+    }
+
+    //   通过手机号查询用户个人信息
+    @RequestMapping("/selectUnitusermessage")
+    @ResponseBody
+    public Unituser GetselectUnitusermessage(@RequestParam("phonenumber") String phonenumber){
+        return unituser_service.GetselectUnitusermessage(phonenumber);
+    }
 
 }

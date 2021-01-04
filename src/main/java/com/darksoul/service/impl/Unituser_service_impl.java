@@ -1,10 +1,13 @@
 package com.darksoul.service.impl;
 
+import com.darksoul.Entity.Personal_reviewall;
 import com.darksoul.Entity.Unituser;
 import com.darksoul.mapper.UnituserMapper;
 import com.darksoul.service.Unituser_Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class Unituser_service_impl implements Unituser_Service {
@@ -35,4 +38,15 @@ public class Unituser_service_impl implements Unituser_Service {
         }
         return false;
     }
+
+    @Override
+    public List<Personal_reviewall> Getselectreviewallbyphonenumber(String phonenumber) {
+        return unituserMapper.Getselectreviewallbyphonenumber(phonenumber);
+    }
+
+    @Override
+    public Unituser GetselectUnitusermessage(String phonenumber) {
+        return unituserMapper.GetselectUnitusermessage(phonenumber);
+    }
+
 }

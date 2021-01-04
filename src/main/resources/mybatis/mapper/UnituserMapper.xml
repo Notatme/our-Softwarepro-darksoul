@@ -24,4 +24,16 @@
         select * from unituser where UnitUserid=#{userid};
     </select>
 
+    <select id="Getselectreviewallbyphonenumber" resultType="Personal_reviewall">
+        SELECT *
+        FROM personal_reviewall
+	    LEFT JOIN unituser ON unituser.UnitUsername = personal_reviewall.review
+        WHERE unituser.phonenumber = #{phonenumber};
+    </select>
+
+    <select id="GetselectUnitusermessage" resultType="Unituser">
+        SELECT *
+        FROM unituser
+        WHERE unituser.phonenumber=#{phonenumber};
+    </select>
 </mapper>
