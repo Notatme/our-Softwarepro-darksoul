@@ -91,5 +91,10 @@ public class personalUsermessageAddServiceimpl implements personalUsermessageAdd
         return personalusermessageAddMapper.findUniuserid(userid);
     }
 
+    @Override
+    public String GetselectUnitid(String phonenumber) {
+        return personalusermessageAddMapper.GetselectPersonid(phonenumber);
+    }
+
 
 }

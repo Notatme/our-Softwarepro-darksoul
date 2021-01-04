@@ -24,4 +24,8 @@ public interface UnituserMapper {
 
 
     Unituser GetselectUnitusermessage(String phonenumber);
+
+    String GetselectUnitid(String phonenumber);
+
+    Unituser findUniusernumberexit(String phonenumber);
 }

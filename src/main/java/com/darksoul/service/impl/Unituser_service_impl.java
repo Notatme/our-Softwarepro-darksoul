@@ -49,4 +49,14 @@ public class Unituser_service_impl implements Unituser_Service {
         return unituserMapper.GetselectUnitusermessage(phonenumber);
     }
 
+    @Override
+    public String GetselectUnitid(String phonenumber) {
+        return unituserMapper.GetselectUnitid(phonenumber);
+    }
+
+    @Override
+    public Unituser findUniusernumberexit_service(String phonenumber) {
+        return unituserMapper.findUniusernumberexit(phonenumber);
+    }
+
 }

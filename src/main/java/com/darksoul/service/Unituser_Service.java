@@ -18,4 +18,8 @@ public interface Unituser_Service {
     List<Personal_reviewall> Getselectreviewallbyphonenumber(String phonenumber);
 
     Unituser GetselectUnitusermessage(String phonenumber);
+
+    String GetselectUnitid(String phonenumber);
+
+    Unituser findUniusernumberexit_service(String phonenumber);
 }

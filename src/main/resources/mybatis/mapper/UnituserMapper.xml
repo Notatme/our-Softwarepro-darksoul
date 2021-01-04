@@ -36,4 +36,17 @@
         FROM unituser
         WHERE unituser.phonenumber=#{phonenumber};
     </select>
+
+    <select id="GetselectUnitid" parameterType="java.lang.String" resultType="java.lang.String">
+        select UnitUserid
+        from unituser
+        where phonenumber=#{phonenumber};
+    </select>
+
+    <select id="findUniusernumberexit" parameterType="java.lang.String">
+        select *
+        from unituser
+        where phonenumber=#{phonenumber};
+    </select>
+
 </mapper>

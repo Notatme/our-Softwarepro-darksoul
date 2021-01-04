@@ -91,4 +91,8 @@
     <select id="findUniuserid" parameterType="java.lang.String" resultType="personaluser">
         select * from personaluser where PersonalUserid=#{userid};
     </select>
+
+    <select id="GetselectPersonid" parameterType="java.lang.String" resultType="java.lang.String">
+        select PersonalUserid from personaluser where phonenumber=#{phonenumber};
+    </select>
 </mapper>

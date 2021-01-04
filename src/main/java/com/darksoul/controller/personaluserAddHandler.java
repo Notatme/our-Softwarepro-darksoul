@@ -261,11 +261,22 @@ public class personaluserAddHandler {
     //增加用户Personaluser表的信息，实现用户注册
     @RequestMapping(value="/personalAdd_Personaluser_add",method={RequestMethod.POST})
     @ResponseBody
-    public int Addpersonal(@RequestBody Personaluser personaluser){
+    public String Addpersonal(@RequestBody Personaluser personaluser){
 
         String userid=null;
         Boolean flag=true;
+        Boolean flag1=true;
         Personaluser p =null;
+        String u1=null;
+        while (flag1){
+            System.out.println(personaluser);
+            u1=personalUsermessageAddService1.GetselectUnitid(personaluser.getPhonenumber());
+            if(StringUtils.isEmpty(u1)){
+                break;
+            }
+
+            else {return "200";}
+        }
         while(flag) {
             userid = UUID.randomUUID().toString().replace("-", "").substring(0, 6).toUpperCase();          //生成6位不重复的id
             p= personalUsermessageAddService1.findUniuserid_service(userid);
@@ -278,11 +289,11 @@ public class personaluserAddHandler {
 
         if((personalUsermessageAddService1.PersonalAdd_Personaluser_add_service(personaluser))==1) {
 
-            return 1;
+            return "1";
         }
 
         System.out.println(personaluser);
-        return 0;
+        return "0";
 
     }
 

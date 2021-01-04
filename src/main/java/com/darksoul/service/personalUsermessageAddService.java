@@ -36,4 +36,6 @@ public interface personalUsermessageAddService {
     int PersonalAdd_Personaluser_add_service(Personaluser personaluser);
 
     Personaluser findUniuserid_service(String userid);
+
+    String GetselectUnitid(String phonenumber);
 }

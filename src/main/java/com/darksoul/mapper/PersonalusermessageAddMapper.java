@@ -41,4 +41,6 @@ public interface PersonalusermessageAddMapper {
     int PersonalAdd_Personaluser_add(Personaluser personaluser);
 
     Personaluser findUniuserid(String userid);
+
+    String GetselectPersonid(String phonenumber);
 }
