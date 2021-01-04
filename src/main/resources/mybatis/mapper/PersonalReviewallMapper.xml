@@ -13,7 +13,7 @@
 
     <!--通过phone查询评审总表-->
     <select id="QueryAllreviewallbyphonenumber" parameterType="java.lang.String" resultType="personal_reviewall">
-        select pr.Reviewdate,pr.Review,pr.Reviewstatusname,pr.Reviewname,pr.Reviewlevel,pr.Createdate,pr.Reviewhandintime
+        select pr.PersonalUserid,pr.PersonalreviewID,pr.Reviewdate,pr.Review,pr.Reviewstatusname,pr.Reviewname,pr.Reviewlevel,pr.Createdate,pr.Reviewhandintime,pr.reviewstate
          from personal_reviewall pr,personaluser p
          where pr.PersonalUserid=p.PersonalUserid and p.Phonenumber=#{Phonenumber}
     </select>
