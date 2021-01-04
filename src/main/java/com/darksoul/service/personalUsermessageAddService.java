@@ -34,4 +34,6 @@ public interface personalUsermessageAddService {
     int PersonalAdd_worksummary_add_service(Personal_worksummary personal_worksummary);
 
     int PersonalAdd_Personaluser_add_service(Personaluser personaluser);
+
+    Personaluser findUniuserid_service(String userid);
 }

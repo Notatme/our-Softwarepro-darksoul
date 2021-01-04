@@ -8,6 +8,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UnituserMapper {
 
+    Unituser findUniuserid(String userid);
+
     int Unituser_add(Unituser unituser);
 
     int Unituser_Update(Unituser unituser);

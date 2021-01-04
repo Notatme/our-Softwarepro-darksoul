@@ -39,4 +39,6 @@ public interface PersonalusermessageAddMapper {
     int PersonalAdd_worksummary_add(Personal_worksummary personal_worksummary);
 
     int PersonalAdd_Personaluser_add(Personaluser personaluser);
+
+    Personaluser findUniuserid(String userid);
 }

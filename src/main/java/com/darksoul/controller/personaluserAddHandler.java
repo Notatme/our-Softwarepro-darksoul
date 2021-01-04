@@ -6,10 +6,13 @@ import com.darksoul.mapper.PersonalusermessageAddMapper;
 import com.darksoul.service.personalUsermessageAddService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/personAdd")
@@ -259,6 +262,19 @@ public class personaluserAddHandler {
     @RequestMapping(value="/personalAdd_Personaluser_add",method={RequestMethod.POST})
     @ResponseBody
     public int Addpersonal(@RequestBody Personaluser personaluser){
+
+        String userid=null;
+        Boolean flag=true;
+        Personaluser p =null;
+        while(flag) {
+            userid = UUID.randomUUID().toString().replace("-", "").substring(0, 6).toUpperCase();          //生成6位不重复的id
+            p= personalUsermessageAddService1.findUniuserid_service(userid);
+            if(StringUtils.isEmpty(p)){
+                personaluser.setPersonalUserid(userid);
+                break;
+            }
+        }
+        System.out.println(personaluser);
 
         if((personalUsermessageAddService1.PersonalAdd_Personaluser_add_service(personaluser))==1) {
 

@@ -20,4 +20,8 @@
         select password from unituser where phonenumber=#{phonenumber};
     </select>
 
+    <select id="findUniuserid" parameterType="java.lang.String" resultType="unituser">
+        select * from unituser where UnitUserid=#{userid};
+    </select>
+
 </mapper>

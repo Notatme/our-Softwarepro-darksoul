@@ -4,6 +4,7 @@ import com.darksoul.Entity.Unituser;
 import com.darksoul.service.Unituser_Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
@@ -20,12 +21,25 @@ public class UnituserHandler {
     public int AddUnituser(@RequestBody Unituser unituser){
 
        // unituser.setUnitUserid();
+        //System.out.println(getAccountIdByUUId());
+        String userid=null;
+        Boolean flag=true;
+        Unituser u =null;
+        while(flag) {
+            userid = UUID.randomUUID().toString().replace("-", "").substring(0, 6).toUpperCase();          //生成6位不重复的id
+          u= unituser_service.findUniuserid_service(userid);
+          if(StringUtils.isEmpty(u)){
+              unituser.setUnitUserid(userid);
+              break;
+            }
+        }
+        System.out.println(unituser);
         if((unituser_service.Unituser_add_serviceimpl(unituser))==1) {
 
             return 1;
         }
 
-        System.out.println(unituser);
+       // System.out.println(unituser);
         return 0;
 
     }
@@ -58,6 +72,14 @@ public class UnituserHandler {
         return false;
     }
 
+    public static String getAccountIdByUUId() {
+        int machineId = 1;//最大支持1-9个集群机器部署
+        int hashCodeV = UUID.randomUUID().toString().hashCode();
+        if(hashCodeV < 0) {//有可能是负数
+            hashCodeV = - hashCodeV;
+        }
+        return machineId + String.format("%015d", hashCodeV);
+    }
 
 
 }

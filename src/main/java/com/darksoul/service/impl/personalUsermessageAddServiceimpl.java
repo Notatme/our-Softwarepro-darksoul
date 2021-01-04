@@ -86,5 +86,10 @@ public class personalUsermessageAddServiceimpl implements personalUsermessageAdd
         return personalusermessageAddMapper.PersonalAdd_Personaluser_add(personaluser);
     }
 
+    @Override
+    public Personaluser findUniuserid_service(String userid) {
+        return personalusermessageAddMapper.findUniuserid(userid);
+    }
+
 
 }

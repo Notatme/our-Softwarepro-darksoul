@@ -87,4 +87,8 @@
        insert into personaluser (PersonalUserid, PersonalUsername, password, unitusername, email, phonenumber, headphoto, createdate) VALUES
       (#{PersonalUserid},#{PersonalUsername},#{password},#{unitusername},#{email},#{phonenumber},#{headphoto},#{createdate});
    </insert>
+
+    <select id="findUniuserid" parameterType="java.lang.String" resultType="personaluser">
+        select * from personaluser where PersonalUserid=#{userid};
+    </select>
 </mapper>

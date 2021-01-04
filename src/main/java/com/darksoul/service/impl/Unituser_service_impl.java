@@ -13,6 +13,11 @@ public class Unituser_service_impl implements Unituser_Service {
     private UnituserMapper unituserMapper;
 
     @Override
+    public Unituser findUniuserid_service(String userid) {
+        return unituserMapper.findUniuserid(userid);
+    }
+
+    @Override
     public int Unituser_add_serviceimpl(Unituser unituser) {
         return unituserMapper.Unituser_add(unituser);
     }
