@@ -7,17 +7,17 @@
 
     <update id="personal_others_update" parameterType="personal_others">
 
-    update personal_others set title=#{title},projectscan=#{projectscan} where PersonalUserid=#{PersonalUserid};
+    update personal_others set title=#{title},projectscan=#{projectscan} where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
 </update>
 
 
     <update id="personal_introduceman_update" parameterType="personal_introduceman">
-        update personal_introduceman set materialsname=#{materialsname},materialsadjunct=#{materialsadjunct} where PersonalUserid=#{PersonalUserid};
+        update personal_introduceman set materialsname=#{materialsname},materialsadjunct=#{materialsadjunct} where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
     </update>
 
     <update id="personal_research_materials_update" parameterType="personal_research_materials">
         update personal_research_materials set starttime=#{starttime},stoptime=#{stoptime},workunit=#{workunit},job=#{job},jobcontent=#{jobcontent},
-        assistcertify=#{assistcertify} where PersonalUserid=#{PersonalUserid};
+        assistcertify=#{assistcertify} where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
     </update>
 
     <update id="personal_basic_message_update" parameterType="personal_basic_message">
@@ -26,52 +26,52 @@
         birthday=#{birthday},fillingtime=#{fillingtime},startworktime=#{startworktime},workingyears=#{workingyears},reviewmeeting=#{reviewmeeting},wantprofessionseries=#{wantprofessionseries},wantmajor=#{wantmajor},
         wantmajorstatus=#{wantmajorstatus},executivefunction=#{executivefunction},executivefunctiontime=#{executivefunctiontime},executivefunctionexplatin=#{executivefunctionexplatin},phone=#{phone},email=#{email},
         fileorganizationname=#{fileorganizationname},politicsstatus=#{politicsstatus},nativeplace=#{nativeplace},address=#{address},idcardfront=#{idcardfront},idcardcontrary=#{idcardcontrary},manphoto=#{manphoto} where
-        PersonalUserid=#{PersonalUserid};
+        PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
     </update>
 
     <update id="personal_education_update" parameterType="personal_education">
         update personal_education set graduationtime=#{graduationtime},graduationschool=#{graduationschool},educationproject=#{educationproject},major=#{major},education=#{education},degree=#{degree},lengthofschooling=#{lengthofschooling},
-        educationid=#{educationid},educationdegreecredential=#{educationdegreecredential} where PersonalUserid=#{PersonalUserid};
+        educationid=#{educationid},educationdegreecredential=#{educationdegreecredential} where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
     </update>
 
     <update id="Personal_Update_major_experience" parameterType="personal_major_experience">
         update personal_major_experience set starttime=#{starttime},whereschoolwork=#{whereschoolwork},endtime=#{endtime},post=#{post},workunit=#{workunit},certifyman=#{certifyman},helpcertify=#{helpcertify} where
-        PersonalUserid=#{PersonalUserid};
+        PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
     </update>
 
     <update id="Personal_Update_occupational_qualification" parameterType="personal_occupational_qualification">
         update personal_occupational_qualification set qualificationname=#{qualificationname},gettime=#{gettime},ratifyoffice=#{ratifyoffice},majorname=#{majorname},credentialnumber=#{credentialnumber},assistcertify=#{assistcertify} where
-        PersonalUserid=#{PersonalUserid};
+        PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
     </update>
 
     <update id="Personal_Update_paper_patents" parameterType="personal_paper_patents">
         update personal_paper_patents set publishtime=#{publishtime},paperclasses=#{paperclasses},role=#{role},ifmagnumopus=#{ifmagnumopus},
         insertperiodical=#{insertperiodical},authorityindexes=#{authorityindexes},yearperiodical=#{yearperiodical},reward=#{reward},papername=#{papername},
-        ifrecommend=#{ifrecommend},paperlevel=#{paperlevel},papercover=#{papercover},papercatalog=#{papercatalog},papercontent=#{papercontent} where PersonalUserid=#{PersonalUserid};
+        ifrecommend=#{ifrecommend},paperlevel=#{paperlevel},papercover=#{papercover},papercatalog=#{papercatalog},papercontent=#{papercontent} where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
     </update>
 
     <update id="Personal_Update_performance_achievement" parameterType="personal_performance_achievement">
         update personal_performance_achievement set performancename=#{performancename},starttime=#{starttime},stoptime=#{stoptime},projectlevel=#{projectlevel},projectcontent=#{projectcontent},personaleffect=#{personaleffect},
-        achievementeffect=#{achievementeffect},projectscan=#{projectscan},personalprojectscan=#{personalprojectscan},projectawardsscan=#{projectawardsscan} where PersonalUserid=#{PersonalUserid};
+        achievementeffect=#{achievementeffect},projectscan=#{projectscan},personalprojectscan=#{personalprojectscan},projectawardsscan=#{projectawardsscan} where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
     </update>
 
     <update id="Personal_Update_performance_awards" parameterType="personal_performance_awards">
         update personal_performance_awards set projectname=#{projectname},awardslevel=#{awardslevel},awardtime=#{awardtime},awardorganization=#{awardorganization},content=#{content},assistcertify=#{assistcertify} where
-        PersonalUserid=#{PersonalUserid};
+        PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
     </update>
 
     <update id="Personal_Update_performance_patents" parameterType="personal_performance_patents">
         update personal_performance_patents set patentsname=#{patentsname},patentstype=#{patentstype},gettime=#{gettime},patentsintroduce=#{patentsintroduce},assistcertify=#{assistcertify} where
-        PersonalUserid=#{PersonalUserid};
+        PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
     </update>
 
     <update id="Personal_Update_reviewall" parameterType="personal_reviewall">
-        update personal_reviewall set reviewdate=#{reviewdate}, review=#{review}, reviewstatusname=#{reviewstatusname}, reviewname=#{reviewname}, reviewlevel=#{reviewlevel}, createdate=#{createdate}, reviewhandintime=#{reviewhandintime} reviewstate=#{reviewstate} where
-        PersonalUserid=#{PersonalUserid};
+        update personal_reviewall set reviewdate=#{reviewdate}, review=#{review}, reviewstatusname=#{reviewstatusname}, reviewname=#{reviewname}, reviewlevel=#{reviewlevel}, createdate=#{createdate}, reviewhandintime=#{reviewhandintime},reviewstate=#{reviewstate} where
+        PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
     </update>
 
     <update id="Personal_Update_worksummary" parameterType="personal_worksummary">
-        update personal_worksummary set worksummary=#{worksummary} where PersonalreviewID=#{PersonalUserid};
+        update personal_worksummary set worksummary=#{worksummary} where PersonalreviewID=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
     </update>
 
     <update id="Personal_Update_Personaluser" parameterType="personaluser">

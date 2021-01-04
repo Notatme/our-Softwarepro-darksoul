@@ -4,10 +4,9 @@ import com.darksoul.Entity.Unituser;
 import com.darksoul.service.Unituser_Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/Unituser")
@@ -20,6 +19,7 @@ public class UnituserHandler {
     @ResponseBody
     public int AddUnituser(@RequestBody Unituser unituser){
 
+       // unituser.setUnitUserid();
         if((unituser_service.Unituser_add_serviceimpl(unituser))==1) {
 
             return 1;
@@ -44,5 +44,20 @@ public class UnituserHandler {
         return 0;
 
     }
+
+
+    @RequestMapping("/unituserlogin")
+    @ResponseBody
+    public Boolean personaluserlogin(@RequestParam(required = true) String phonenumber, @RequestParam(required = true) String password){
+        if( unituser_service.userlogin(phonenumber,password)==true)
+        {
+            System.out.println("验证成功辣！");
+            return true;
+
+        }
+        return false;
+    }
+
+
 
 }

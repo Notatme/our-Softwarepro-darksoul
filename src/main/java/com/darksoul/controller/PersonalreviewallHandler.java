@@ -51,7 +51,9 @@ public class PersonalreviewallHandler {
 //    单位用户通过模糊查询，输入个人用户名字查找总表信息
     @RequestMapping("/selectreviewallbyname")
     public List<Personal_reviewall> Getselectreviewallbyname(@RequestParam("PersonalUsername") String PersonalUsername){
+        System.out.println(personalReviewallservice.Getselectreviewallbyname(PersonalUsername));
         return personalReviewallservice.Getselectreviewallbyname(PersonalUsername);
+
     }
 
 }

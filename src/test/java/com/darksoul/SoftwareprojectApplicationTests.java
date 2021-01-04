@@ -19,13 +19,6 @@ class SoftwareprojectApplicationTests {
     void contextLoads() {
 
 
-
-       personalusermessageAddMapper.personal_messageadd(new Personal_introduceman("333","444","dhsj","sdsd"));
-        //System.out.println(a);
-
-       // personalusermessageAddMapper.bookaddtest(new BookCase(7,"22"));
-      //int a=  personalusermessageAddMapper.personaladdohtners(new Personal_others("79","76","76","76"));
-        //System.out.println(a);
     }
 
 }

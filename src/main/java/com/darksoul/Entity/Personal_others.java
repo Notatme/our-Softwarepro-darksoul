@@ -55,7 +55,7 @@ public class Personal_others {
 
 
     public void setProjectscan(String projectscan) {
-        projectscan = projectscan;
+        this.projectscan = projectscan;
     }
 
     @Override
@@ -64,7 +64,7 @@ public class Personal_others {
                 "PersonalUserid='" + PersonalUserid + '\'' +
                 ", PersonalreviewID='" + PersonalreviewID + '\'' +
                 ", title='" + title + '\'' +
-                ", Projectscan='" + projectscan + '\'' +
+                ", projectscan='" + projectscan + '\'' +
                 '}';
     }
 }

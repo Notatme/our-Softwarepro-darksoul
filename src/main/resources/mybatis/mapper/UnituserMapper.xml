@@ -16,4 +16,8 @@
         UnitUserid=#{UnitUserid};
     </update>
 
+    <select id="GetUserpwdbyphonenumber" parameterType="java.lang.String" resultType="java.lang.String">
+        select password from unituser where phonenumber=#{phonenumber};
+    </select>
+
 </mapper>

@@ -27,6 +27,7 @@ public class personaluserUpdateHandler {
             System.out.println(personal_others);
             return 1;
         }
+        //System.out.println(personal_others);
         return 0;
 
     }

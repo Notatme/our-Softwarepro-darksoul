@@ -12,7 +12,7 @@
     </insert>
 
     <insert id="personaladdohtners" parameterType="personal_others">
-        insert into personal_others (PersonalUserid, PersonalreviewID, title, Projectscan) VALUES (#{PersonalUserid},#{PersonalreviewID},#{title},#{Projectscan});
+        insert into personal_others (PersonalUserid, PersonalreviewID, title, projectscan) VALUES (#{PersonalUserid},#{PersonalreviewID},#{title},#{projectscan});
 
     </insert>
 

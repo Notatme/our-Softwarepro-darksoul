@@ -7,4 +7,6 @@ public interface Unituser_Service {
     int Unituser_add_serviceimpl(Unituser unituser);
 
     int Unituser_Update_service(Unituser unituser);
+
+    boolean userlogin(String phonenumber, String password);
 }

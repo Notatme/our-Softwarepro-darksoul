@@ -11,4 +11,6 @@ public interface UnituserMapper {
     int Unituser_add(Unituser unituser);
 
     int Unituser_Update(Unituser unituser);
+
+    String GetUserpwdbyphonenumber(String phonenumber);
 }
