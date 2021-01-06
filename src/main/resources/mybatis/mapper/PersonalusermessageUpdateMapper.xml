@@ -75,7 +75,7 @@
     </update>
 
     <update id="Personal_Update_Personaluser" parameterType="personaluser">
-        update personaluser set PersonalUsername=#{PersonalUsername},password=#{password},unitusername=#{unitusername},email=#{email},phonenumber=#{phonenumber},
+        update personaluser set PersonalUsername=#{PersonalUsername},password=#{password},unitusername=#{unitusername},email=#{email},phonenumber=#{phonenumber},truename=#{truename},documentstype=#{documentstype},documentsnumber=#{documentsnumber},
                                 headphoto=#{headphoto},createdate=#{createdate} where PersonalUserid=#{PersonalUserid};
     </update>
 </mapper>

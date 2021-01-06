@@ -18,6 +18,9 @@ public class Personaluser {
     private String unitusername;//单位用户名
     private String email;//邮箱
     private String phonenumber;//手机号码
+    private String truename;//姓名
+    private String documentstype;//证件类型
+    private String documentsnumber;//证件号码
     private String headphoto;//头像
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd")
@@ -26,13 +29,16 @@ public class Personaluser {
     public Personaluser() {
     }
 
-    public Personaluser(String personalUserid, String personalUsername, String password, String unitusername, String email, String phonenumber, String headphoto, Date createdate) {
+    public Personaluser(String personalUserid, String personalUsername, String password, String unitusername, String email, String phonenumber, String truename, String documentstype, String documentsnumber, String headphoto, Date createdate) {
         PersonalUserid = personalUserid;
         PersonalUsername = personalUsername;
         this.password = password;
         this.unitusername = unitusername;
         this.email = email;
         this.phonenumber = phonenumber;
+        this.truename = truename;
+        this.documentstype = documentstype;
+        this.documentsnumber = documentsnumber;
         this.headphoto = headphoto;
         this.createdate = createdate;
     }
@@ -85,6 +91,30 @@ public class Personaluser {
         this.phonenumber = phonenumber;
     }
 
+    public String getTruename() {
+        return truename;
+    }
+
+    public void setTruename(String truename) {
+        this.truename = truename;
+    }
+
+    public String getDocumentstype() {
+        return documentstype;
+    }
+
+    public void setDocumentstype(String documentstype) {
+        this.documentstype = documentstype;
+    }
+
+    public String getDocumentsnumber() {
+        return documentsnumber;
+    }
+
+    public void setDocumentsnumber(String documentsnumber) {
+        this.documentsnumber = documentsnumber;
+    }
+
     public String getHeadphoto() {
         return headphoto;
     }
@@ -110,6 +140,9 @@ public class Personaluser {
                 ", unitusername='" + unitusername + '\'' +
                 ", email='" + email + '\'' +
                 ", phonenumber='" + phonenumber + '\'' +
+                ", truename='" + truename + '\'' +
+                ", documentstype='" + documentstype + '\'' +
+                ", documentsnumber='" + documentsnumber + '\'' +
                 ", headphoto='" + headphoto + '\'' +
                 ", createdate=" + createdate +
                 '}';

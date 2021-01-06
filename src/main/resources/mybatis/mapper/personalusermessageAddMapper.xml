@@ -84,8 +84,8 @@
     </insert>
 
    <insert id="PersonalAdd_Personaluser_add" parameterType="personaluser">
-       insert into personaluser (PersonalUserid, PersonalUsername, password, unitusername, email, phonenumber, headphoto, createdate) VALUES
-      (#{PersonalUserid},#{PersonalUsername},#{password},#{unitusername},#{email},#{phonenumber},#{headphoto},#{createdate});
+      insert into personaluser (PersonalUserid, PersonalUsername, password, unitusername, email, phonenumber,truename,documentstype,documentsnumber,headphoto, createdate) VALUES
+      (#{PersonalUserid},#{PersonalUsername},#{password},#{unitusername},#{email},#{phonenumber},#{truename},#{documentstype},#{documentsnumber},#{headphoto},#{createdate});
    </insert>
 
     <select id="findUniuserid" parameterType="java.lang.String" resultType="personaluser">
