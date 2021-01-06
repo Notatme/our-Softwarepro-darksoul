@@ -17,7 +17,7 @@ public interface PersonaluserMapper {
     List<Personaluser> QueryAllUser();
 
     //通过用户的id查询用户的登录信息
-    Personaluser QueryAllUserbyid(Integer id);
+    Personaluser QueryAllUserbyid(@Param("PersonalUserid")String PersonalUserid);
 
     //用于用户登录验证
     String GetUserpwdbyphonenumber(String userphonenumber);

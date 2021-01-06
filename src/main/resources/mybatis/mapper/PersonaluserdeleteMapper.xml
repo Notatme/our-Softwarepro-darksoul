@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.darksoul.mapper.PersonaluserdeleteMapper">
+    <delete id="DeletePersonal_reviewall">
+       delete
+       from personal_basic_message
+        WHERE personal_basic_message.PersonalUserid=#{PersonalUserid} and personal_basic_message.PersonalreviewID=#{PersonalreviewID}
+    </delete>
+
+    <delete id="DeletePersonal_education">
+        delete
+        from personal_education
+        WHERE personal_education.PersonalUserid=#{PersonalUserid} and personal_education.PersonalreviewID=#{PersonalreviewID}
+    </delete>
+
+    <delete id="DeletePersonal_major_experience">
+        delete
+        from personal_major_experience
+        WHERE personal_major_experience.PersonalUserid=#{PersonalUserid} and personal_major_experience.PersonalreviewID=#{PersonalreviewID}
+    </delete>
+
+    <delete id="DeletePersonal_introduceman">
+        delete
+        from personal_introduceman
+        WHERE personal_introduceman.PersonalUserid=#{PersonalUserid} and personal_introduceman.PersonalreviewID=#{PersonalreviewID}
+    </delete>
+
+    <delete id="DeletePersonal_paper_patents">
+        delete
+        from personal_paper_patents
+        WHERE personal_paper_patents.PersonalUserid=#{PersonalUserid} and personal_paper_patents.PersonalreviewID=#{PersonalreviewID}
+    </delete>
+
+    <delete id="DeletePersonal_performance_achievement">
+        delete
+        from personal_performance_achievement
+        WHERE personal_performance_achievement.PersonalUserid=#{PersonalUserid} and personal_performance_achievement.PersonalreviewID=#{PersonalreviewID}
+    </delete>
+
+    <delete id="DeletePersonal_performance_awards">
+        delete
+        from personal_performance_awards
+        WHERE personal_performance_awards.PersonalUserid=#{PersonalUserid} and personal_performance_awards.PersonalreviewID=#{PersonalreviewID}
+    </delete>
+
+    <delete id="DeletePersonal_performance_patents">
+        delete
+        from personal_performance_patents
+        WHERE personal_performance_patents.PersonalUserid=#{PersonalUserid} and personal_performance_patents.PersonalreviewID=#{PersonalreviewID}
+    </delete>
+
+    <delete id="DeletePersonal_occupational_qualification">
+        delete
+        from personal_occupational_qualification
+        WHERE personal_occupational_qualification.PersonalUserid=#{PersonalUserid} and personal_occupational_qualification.PersonalreviewID=#{PersonalreviewID}
+    </delete>
+
+    <delete id="DeletePersonal_research_materials">
+        delete
+        from personal_research_materials
+        WHERE personal_research_materials.PersonalUserid=#{PersonalUserid} and personal_research_materials.PersonalreviewID=#{PersonalreviewID}
+    </delete>
+
+    <delete id="DeletePersonal_worksummary">
+        delete
+        from personal_worksummary
+        WHERE personal_worksummary.PersonalUserid=#{PersonalUserid} and personal_worksummary.PersonalreviewID=#{PersonalreviewID}
+    </delete>
+    <delete id="DeletePersonal_others">
+        delete
+        from personal_others
+        WHERE personal_others.PersonalUserid=#{PersonalUserid} and personal_others.PersonalreviewID=#{PersonalreviewID}
+    </delete>
+</mapper>

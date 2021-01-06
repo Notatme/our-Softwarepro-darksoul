@@ -31,8 +31,8 @@ public class PersonalUserServiceimpl implements PersonalUserService {
 
     //通过id查询
     @Override
-    public Personaluser querypersonbyid(Integer id){
-        return personaluserMapper1.QueryAllUserbyid(id);
+    public Personaluser querypersonbyid(String PersonalUserid){
+        return personaluserMapper1.QueryAllUserbyid(PersonalUserid);
     }
 
 //    通过phonenumber查询到用户id

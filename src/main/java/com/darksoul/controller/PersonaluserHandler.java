@@ -58,10 +58,10 @@ public class PersonaluserHandler {
 
 
     //通过id查询用户登录信息表
-    @RequestMapping("/finduserbyid/{userid}")
+    @RequestMapping("/finduserbyid")
     @ResponseBody
-    public Personaluser getuserbyid(@PathVariable ("userid") Integer id){
-        return personalUserService1.querypersonbyid(id);
+    public Personaluser getuserbyid(@RequestParam("PersonalUserid") String PersonalUserid){
+        return personalUserService1.querypersonbyid(PersonalUserid);
     }
 
 }

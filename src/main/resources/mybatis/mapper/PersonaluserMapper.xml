@@ -14,8 +14,8 @@
 
 
     <!--通过id查询用户-->
-    <select id="QueryAllUserbyid" parameterType="java.lang.Integer" resultType="personaluser">
-        select * from personaluser where PersonalUserid=#{id};
+    <select id="QueryAllUserbyid" parameterType="java.lang.String" resultType="personaluser">
+        select * from personaluser where PersonalUserid=#{PersonalUserid};
     </select>
 
     <!--通过phone查询信息-->

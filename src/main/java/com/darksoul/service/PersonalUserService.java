@@ -12,7 +12,7 @@ public interface PersonalUserService {
     Boolean userlogin(String userphone,String userpassword);
 
     //通过id查询用户登录信息
-    Personaluser querypersonbyid(Integer id);
+    Personaluser querypersonbyid(String PersonalUserid);
 
     //    通过phonenumber查询到用户id
     public Personaluser getUseridbyphonenumber(String phonenumber);
