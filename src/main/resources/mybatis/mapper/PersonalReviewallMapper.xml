@@ -7,15 +7,19 @@
 
 
     <!--通过id查询用户-->
-    <select id="QueryAllreviewallbyid" parameterType="java.lang.Integer" resultType="personal_reviewall">
-        select * from personal_reviewall where PersonalUserid=#{id};
+    <select id="QueryAllreviewallbyid"  resultType="personal_reviewall">
+       SELECT *
+       FROM personal_reviewall
+        LEFT JOIN personaluser on personaluser.PersonalUserid=personal_reviewall.PersonalUserid
+        WHERE personaluser.PersonalUserid=#{PersonalUserid};
     </select>
 
     <!--通过phone查询评审总表-->
-    <select id="QueryAllreviewallbyphonenumber" parameterType="java.lang.String" resultType="personal_reviewall">
-        select pr.PersonalUserid,pr.PersonalreviewID,pr.Reviewdate,pr.Review,pr.Reviewstatusname,pr.Reviewname,pr.Reviewlevel,pr.Createdate,pr.Reviewhandintime,pr.reviewstate
-         from personal_reviewall pr,personaluser p
-         where pr.PersonalUserid=p.PersonalUserid and p.Phonenumber=#{Phonenumber}
+    <select id="QueryAllreviewallbyphonenumber" resultType="personal_reviewall">
+        SELECT *
+       FROM personal_reviewall
+        LEFT JOIN personaluser on personaluser.PersonalUserid=personal_reviewall.PersonalUserid
+        WHERE personaluser.Phonenumber=#{Phonenumber};
     </select>
     <!--//在评审总表界面将其中一条评审表删除。-->
     <delete id="DeletePersonal_reviewall">

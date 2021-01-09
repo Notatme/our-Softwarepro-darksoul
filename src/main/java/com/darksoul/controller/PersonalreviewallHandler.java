@@ -16,16 +16,16 @@ public class PersonalreviewallHandler {
 //http://localhost:8081/person/personaluserlogin?userphonenumber=12345678901&userpassword=123456
 
 //    通过id查询评审总表
-    @RequestMapping("/findreviewallbyid/{userid}")
+    @RequestMapping("/findreviewallbyid/{PersonalUserid}")
     @ResponseBody
-    public Personal_reviewall getpersonal_reviewallbyid(@PathVariable("userid")Integer id){
-        return personalReviewallservice.querypersonalReviewallbyid(id);
+    public List<Personal_reviewall> getpersonal_reviewallbyid(@PathVariable("PersonalUserid")String PersonalUserid){
+        return personalReviewallservice.querypersonalReviewallbyid(PersonalUserid);
     }
 
 //    通过登录的手机号查询评审总表
     @RequestMapping("/findreviewallbyphone/{Phonenumber}")
     @ResponseBody
-    public Personal_reviewall getpersonal_reviewallbyPhonenumber(@PathVariable("Phonenumber")String Phonenumber){
+    public List<Personal_reviewall> getpersonal_reviewallbyPhonenumber(@PathVariable("Phonenumber")String Phonenumber){
         return personalReviewallservice.querypersonalReviewallbyPhonenumber(Phonenumber);
     }
     //在评审总表界面将其中一条评审表删除。
