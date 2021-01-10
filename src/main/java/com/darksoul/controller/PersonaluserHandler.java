@@ -53,7 +53,12 @@ public class PersonaluserHandler {
         return 0;
     }
 
-
+//    通过手机号查询用户表内的评审id
+    @RequestMapping("/personalusergetuseridbyphonenumber")
+    @ResponseBody
+     public String  Getuseridbyphonenumber(@RequestParam("phonenumber")String phonenumber){
+        return personalUserService1.getUseridbyphonenumber(phonenumber);
+    }
 
 
 

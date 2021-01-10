@@ -37,7 +37,7 @@ public class PersonalUserServiceimpl implements PersonalUserService {
 
 //    通过phonenumber查询到用户id
     @Override
-    public Personaluser getUseridbyphonenumber(String phonenumber){
+    public String getUseridbyphonenumber(String phonenumber){
         return personaluserMapper1.GetUseridbyphonenumber(phonenumber);
     }
 
@@ -45,4 +45,6 @@ public class PersonalUserServiceimpl implements PersonalUserService {
     public int personaluserchangepassword_service(String PersonalUserid, String password) {
         return personaluserMapper1.personaluserchangepassword(PersonalUserid,password);
     }
+
+
 }

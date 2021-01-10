@@ -15,7 +15,8 @@ public interface PersonalUserService {
     Personaluser querypersonbyid(String PersonalUserid);
 
     //    通过phonenumber查询到用户id
-    public Personaluser getUseridbyphonenumber(String phonenumber);
+    public String getUseridbyphonenumber(String phonenumber);
 
     int personaluserchangepassword_service(String PersonalUserid, String password);
+
 }

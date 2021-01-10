@@ -18,9 +18,9 @@
         select * from personaluser where PersonalUserid=#{PersonalUserid};
     </select>
 
-    <!--通过phone查询信息-->
-    <select id="GetUseridbyphonenumber" parameterType="java.lang.String" resultType="personaluser">
-        select p.PersonalUserid from personaluser p where Phonenumber=#{userphonenumber};
+    <!--通过phone查询userid-->
+    <select id="GetUseridbyphonenumber" parameterType="java.lang.String" resultType="String">
+        select p.PersonalUserid from personaluser p where p.phonenumber=#{phonenumber};
     </select>
 
     <update id="personaluserchangepassword" parameterType="java.lang.String">

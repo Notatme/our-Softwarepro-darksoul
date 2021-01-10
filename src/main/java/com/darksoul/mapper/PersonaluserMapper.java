@@ -25,9 +25,8 @@ public interface PersonaluserMapper {
     //通过用户的id查询基本信息表查询
     List<Personal_basic_message> Queryuserbasicmessagebyid();
 
-//    通过phonenumber查找到id
-    Personaluser GetUseridbyphonenumber(String phonenumber);
-
+//    通过phonenumber查找到userid
+    String GetUseridbyphonenumber(@Param("phonenumber") String phonenumber);
 //登录之后的修改密码
     int personaluserchangepassword(@Param("PersonalUserid") String personalUserid,@Param("password") String password);
 }
