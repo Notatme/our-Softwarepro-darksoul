@@ -59,4 +59,14 @@ public class Unituser_service_impl implements Unituser_Service {
         return unituserMapper.findUniusernumberexit(phonenumber);
     }
 
+    @Override
+    public int changeuserstate_service(String personalUserid, String personalreviewID, String reviewstate) {
+        return unituserMapper.changeuserstate(personalUserid,personalreviewID,reviewstate);
+    }
+
+    @Override
+    public int changeheadpicture_service(String unitUserid, String headphoto) {
+        return unituserMapper.changeheadpicture(unitUserid,headphoto);
+    }
+
 }

@@ -46,7 +46,7 @@ public class PersonaluserHandler {
     public int personaluserchangepassword(@RequestParam(required = true) String PersonalUserid, @RequestParam(required = true) String password){
         if( personalUserService1.personaluserchangepassword_service(PersonalUserid,password)==1)
         {
-            System.out.println("验证成功辣！");
+            System.out.println("验证成功！");
             return 1;
 
         }
@@ -67,6 +67,19 @@ public class PersonaluserHandler {
     @ResponseBody
     public Personaluser getuserbyid(@RequestParam("PersonalUserid") String PersonalUserid){
         return personalUserService1.querypersonbyid(PersonalUserid);
+    }
+
+    //通过id更改用户的头像
+    @RequestMapping("/changePersonalheadpicture")
+    @ResponseBody
+    public int changeheadpicture(@RequestBody Personaluser personaluser) {
+        System.out.println(personaluser);
+        if(personalUserService1.changeheadpicture_service(personaluser.getPersonalUserid(),personaluser.getHeadphoto())==1){
+            return 1;
+        }
+
+        return 0;
+
     }
 
 }

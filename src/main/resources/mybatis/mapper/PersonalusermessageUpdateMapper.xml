@@ -71,7 +71,7 @@
     </update>
 
     <update id="Personal_Update_worksummary" parameterType="personal_worksummary">
-        update personal_worksummary set worksummary=#{worksummary} where PersonalreviewID=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
+        update personal_worksummary set worksummary=#{worksummary} where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
     </update>
 
     <update id="Personal_Update_Personaluser" parameterType="personaluser">

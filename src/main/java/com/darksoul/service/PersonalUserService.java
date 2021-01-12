@@ -19,4 +19,5 @@ public interface PersonalUserService {
 
     int personaluserchangepassword_service(String PersonalUserid, String password);
 
+    int changeheadpicture_service(String personalUserid, String headphoto);
 }

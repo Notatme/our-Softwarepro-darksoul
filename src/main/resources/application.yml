@@ -1,3 +1,7 @@
+#文件上传
+#cbs:
+#    imagesPaths:
+#        file:/E:/img/
 #server:
 #  port: 8081
 #

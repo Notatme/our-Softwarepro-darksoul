@@ -29,4 +29,6 @@ public interface PersonaluserMapper {
     String GetUseridbyphonenumber(@Param("phonenumber") String phonenumber);
 //登录之后的修改密码
     int personaluserchangepassword(@Param("PersonalUserid") String personalUserid,@Param("password") String password);
+
+    int changeheadpicture(@Param("PersonalUserid")String personalUserid,@Param("headphoto")String headphoto);
 }

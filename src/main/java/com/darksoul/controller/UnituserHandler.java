@@ -1,6 +1,7 @@
 package com.darksoul.controller;
 
 import com.darksoul.Entity.Personal_reviewall;
+import com.darksoul.Entity.Personaluser;
 import com.darksoul.Entity.Unituser;
 import com.darksoul.service.Unituser_Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -115,6 +116,33 @@ public class UnituserHandler {
     @ResponseBody
     public String GetselectUnituserid(@RequestParam("phonenumber") String phonenumber){
         return unituser_service.GetselectUnitid(phonenumber);
+    }
+
+    //更新用户的审核状态
+    @RequestMapping(value="/Changeuserstate",method={RequestMethod.POST})
+    @ResponseBody
+    public int Updatestate(@RequestParam("PersonalUserid") String PersonalUserid,@RequestParam("PersonalreviewID") String PersonalreviewID,@RequestParam("reviewstate") String reviewstate){
+
+        if((unituser_service.changeuserstate_service(PersonalUserid,PersonalreviewID,reviewstate))==1) {
+
+            return 1;
+        }
+
+        //System.out.println(personaluser);
+        return 0;
+
+    }
+
+    //通过id更改用户的头像
+    @RequestMapping("/changeUnituserheadpicture")
+    @ResponseBody
+    public int changeheadpicture(@RequestBody Unituser unituser) {
+        System.out.println(unituser);
+
+              if(unituser_service.changeheadpicture_service(unituser.getUnitUserid(),unituser.getHeadphoto())==1){
+                  return 1;
+              }
+              return 0;
     }
 
 }

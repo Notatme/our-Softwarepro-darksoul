@@ -49,4 +49,12 @@
         where phonenumber=#{phonenumber};
     </select>
 
+    <update id="changeuserstate" parameterType="java.lang.String">
+        update personal_reviewall set reviewstate=#{reviewstate} where PersonalUserid=#{PersonalUserid} and PersonalreviewID=#{PersonalreviewID};
+    </update>
+
+    <update id="changeheadpicture" parameterType="java.lang.String">
+        update unituser set headphoto=#{headphoto} where UnitUserid=#{UnitUserid};
+    </update>
+
 </mapper>

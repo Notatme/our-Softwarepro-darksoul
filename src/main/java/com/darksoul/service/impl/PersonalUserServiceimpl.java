@@ -46,5 +46,8 @@ public class PersonalUserServiceimpl implements PersonalUserService {
         return personaluserMapper1.personaluserchangepassword(PersonalUserid,password);
     }
 
-
+    @Override
+    public int changeheadpicture_service(String personalUserid, String headphoto) {
+        return personaluserMapper1.changeheadpicture(personalUserid,headphoto);
+    }
 }

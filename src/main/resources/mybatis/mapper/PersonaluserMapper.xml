@@ -27,4 +27,8 @@
         update personaluser set password=#{password} where PersonalUserid=#{PersonalUserid};
     </update>
 
+    <update id="changeheadpicture" parameterType="java.lang.String">
+        update personaluser set headphoto=#{headphoto} where PersonalUserid=#{PersonalUserid};
+    </update>
+
 </mapper>

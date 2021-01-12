@@ -22,4 +22,8 @@ public interface Unituser_Service {
     String GetselectUnitid(String phonenumber);
 
     Unituser findUniusernumberexit_service(String phonenumber);
+
+    int changeuserstate_service(String personalUserid, String personalreviewID, String reviewstate);
+
+    int changeheadpicture_service(String unitUserid, String headphoto);
 }
